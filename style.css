@@ -1,0 +1,368 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+html {
+     overflow-x: hidden;
+ }
+ ::selection {
+    background-color: #3782ce;
+}
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     background: #161616;
+     color: #fff;
+     font-family: "Neue Machina";
+ }
+ 
+ body {
+     overflow: hidden;
+     width: 100%;
+ }
+ ::-webkit-scrollbar {
+     width: 0em; /* Set the width to zero */
+}
+hr{
+     width: 100vw;
+}
+a{
+     text-decoration: none;
+     color: #fff;
+     transition: 0.3s ease;
+}
+a:hover{
+  color: #3782ce;
+
+}
+.fa-arrow-up{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.fa-arrow-up:hover{
+  background-color: #4a5050;
+}
+.container{
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 100px;
+     background-color: #fff;
+     position: relative;
+}
+.bg-dark{
+     background-color: rgb(29, 29, 29);
+}
+
+ 
+ .smooth-scroll-wrapper {
+     position: fixed;
+     z-index: 2;
+     top: 0;
+     left: 0;
+     overflow: hidden;
+ }
+ 
+ .content {
+     width: 80%;
+     /* margin: 160px auto; */
+     margin: 0;
+ }
+ #blob-hero {
+    position: absolute;
+    top:-900px;
+    left: 50%;
+    transform: translate(-50%);
+    filter: blur(200px); 
+    z-index: 90;
+    width: 1000px;
+    height: 1000px;/* Adjust the blur value as needed */
+  }
+ h1 {
+    z-index: 95;
+     font-size: 15rem;
+     /* text-shadow: 0px 2px 85px 0px rgba(146, 157, 179, 0.21); */
+     /* text-shadow: 0px 0px 30px rgba(199,214,244,0.3); */
+     text-shadow: 0px 0px 30px #f2f3f4f6;
+     font-family: "Poppins";
+     line-height: 80%;
+     transition: color 3s ease;
+ }
+ 
+ p {
+     font-size: 24px;
+     line-height: 40px;
+     font-weight: 200;
+     color: rgba(255, 255, 255, 0.6);
+ }
+ 
+ /* FOOTER */
+ footer{
+    background-color: #272A2A;
+    padding: 0px 25px 0px 25px;
+ }
+ .footer-parent {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr) 0.5fr;
+     grid-template-rows: repeat(3, 1fr);
+     grid-column-gap: 20px;
+     grid-row-gap: 15px;
+     padding: 50px 0px 50px 0px;
+     }
+     .div1{
+        display: flex;
+        align-items: center;
+        font-size: 9rem;
+     }
+     
+     .div1 { grid-area: 1 / 1 / 4 / 4; }
+     .div2 { grid-area: 1 / 4 / 2 / 5; }
+     .div3 { grid-area: 1 / 5 / 2 / 6; }
+     .div4 { grid-area: 2 / 4 / 3 / 5; }
+     .div5 { grid-area: 2 / 5 / 3 / 6; }
+     .div6 { grid-area: 3 / 4 / 4 / 5; }
+     .div7 { grid-area: 3 / 5 / 4 / 6; }
+
+
+     /* NAVIGATION BAR */
+     /* .nav-header{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+     } */
+
+     /* Initially hide the nav menu using CSS */
+.nav-menu {
+    /* display: none; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  /* Show the nav menu when the 'show-nav' class is applied */
+  .nav-menu.show-nav {
+    display: block;
+    max-height: 80vh;
+  }
+  
+
+
+  
+  /* Show the nav menu when the 'show-nav' class is applied */
+  .back-nav-menu.back-show-nav {
+    display: block;
+    max-height: 100vh;
+  }
+
+
+
+  /* MOUSE SCROLL  */
+.container .mouse {
+  overflow:hidden;
+  position:absolute;
+  left:50%;
+  top:90%;
+  width:24px;
+  margin: -12px;
+  height:50px;
+  border:2px solid #111c27;
+  border-radius:30px;
+  opacity:.3;
+  z-index: 1000;
+  opacity: 0;
+  /* background: #979797; */
+  animation: show-mouse 3s cubic-bezier(0.77, 0, 0.175, 1) 3s forwards;
+}
+ .container .mouse:after {
+  display: block;
+  content:"";
+  position:absolute;
+  left:10px;
+  top:10px;
+  width:5px;
+  height:4px;
+  margin-left: -3px;
+  background-color:rgb(0, 0, 0);
+  border-radius:2px;
+  animation: mouse-wheel 3s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite;
+}
+@keyframes show-mouse{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 0.2;
+    }
+}
+
+@keyframes mouse-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }  
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0);
+    height: 4px;
+  }
+  50% {
+    transform: translateY(0);
+    height: 20px;
+  }
+  70% {
+    transform: translateY(15px);
+    height: 4px;
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+h1 {
+    opacity: 1;
+}
+
+@keyframes introAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(0); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the h1 element */
+h1 {
+    animation: introAnimation 1.5s ease-out 1s forwards; 
+   
+}
+
+#about{
+    background-color: #111c27;
+}
+#name{
+    color: #272A2A;
+}
+
+/* .text-pop-up-top:hover {
+	        animation: text-pop-up-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  @keyframes text-pop-up-top {
+    0% {   
+        transform: translateY(0);
+        transform-origin: 50% 50%;
+        text-shadow: none;
+    }
+    100% {    
+        transform: translateY(-20px);
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  } */
+  
+  .focus-in-contract-bck {
+	        animation: focus-in-contract-bck 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  .focus-in-contract-bck.animates {
+	        animation: focus-in-contract-bck 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+  @keyframes focus-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        transform: translateZ(300px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(12px);
+        filter: blur(0);
+        opacity: 1;
+    }
+  }
+/* 
+.blur-out-expand {
+            letter-spacing: normal;
+}
+.blur-out-expand.animate {
+    animation: blur-out-expand-animation 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes blur-out-expand-animation {
+    0% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        -webkit-filter: blur(0.01);
+                filter: blur(0.01);
+      }
+      100% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(300px);
+                transform: translateZ(300px);
+        -webkit-filter: blur(12px) opacity(0%);
+                filter: blur(12px) opacity(0%);
+      }
+  }
+  
+   */
+
+
+   /* HERO BUTTON  */
+
+   .button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #3782ce;
+    border: 2px solid #3782ce;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #111c27;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button:hover::before {
+    scale: 3;
+  }
+  
+  .button:hover {
+    color: #fff;
+    scale: 1.1;
+    box-shadow: 0 0px 20px #F2F3F4;
+  }
+  
+  .button:active {
+    scale: 1;
+  }
+  
+  
+  

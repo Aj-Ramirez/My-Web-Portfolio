@@ -1,0 +1,100 @@
+/*   
+     body {
+          align-items: center;
+          display: flex;
+          height: 100vh;
+          justify-content: center;
+          margin: 0;
+        } */
+        
+        svg {
+          height: 80px;
+          position: fixed;
+          z-index: 100;
+          top: 10px;
+          right: 10px;
+          width: 80px;
+        }
+        .plates {
+          display: flex;
+          flex-wrap: wrap;
+          max-height: 160px;
+          width: 640px;
+        }
+        @media (max-width: 640px) {
+          .plates {
+            width: 320px;
+          }
+        }
+     
+     .plate {
+          height: 80px;
+          width: 80px;
+        }
+        .burger {
+          filter: url(#gooeyness);
+        }
+        .x {
+          transform: scale(0);
+          transition: transform 400ms;
+        }
+        .line {
+          fill: none;
+          /* stroke: rgb(255, 255, 255); */
+          /* stroke: #128bbe; */
+          stroke: #3782ce;
+          stroke-width: 6px;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          transform-origin: 50%;
+          transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+        }
+        .x .line {
+          stroke-width: 5.5px;
+        }
+        .active .x {
+          transform: scale(1);
+          transition: transform 400ms 350ms;
+        }
+  /* Den femte rätten */
+  .plate5 .line {
+     transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+   }
+   .plate5 .line1 {
+     stroke-dasharray: 40 40;
+   }
+   .plate5 .line2 {
+     stroke-dasharray: 21 39;
+   }
+   .plate5 .line3 {
+     stroke-dasharray: 21 39;
+   }
+   .plate5 .line4 {
+     stroke-dasharray: 40 40;
+   }
+   .plate5 .x {
+     transition: transform 400ms 50ms;
+   }
+
+   .active.plate5 .line {
+     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+   }
+   .active.plate5 .line1 {
+     stroke-dasharray: 1 40;
+     stroke-dashoffset: -33px;
+   }
+   .active.plate5 .line2 {
+     stroke-dasharray: 5 39;
+     stroke-dashoffset: -37px;
+   }
+   .active.plate5 .line3 {
+     stroke-dasharray: 5 39;
+     stroke-dashoffset: -37px;
+   }
+   .active.plate5 .line4 {
+     stroke-dasharray: 1 40;
+     stroke-dashoffset: -33px;
+   }
+   .active.plate5 .x {
+     transition: transform 400ms 50ms;
+   }
