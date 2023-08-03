@@ -57,7 +57,7 @@ function toggleNav() {
    function revealMouseWithDelay() {
      const mouse = document.querySelector(".container .mouse");
      mouse.classList.add("mouse-wheel");
-   }setTimeout(revealMouseWithDelay, 3000);
+   }setTimeout(revealMouseWithDelay, 7000);
 
 
  

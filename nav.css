@@ -19,6 +19,12 @@ body {
      height: 100vh;
      overflow-y: hidden;
      padding-left: 40px;
+     -webkit-box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
+-moz-box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
+box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
+}
+.plate5:hover{
+  cursor: pointer;
 }
 
 .u-b6 {
@@ -190,6 +196,15 @@ body {
   height: 100vh;
   overflow-y: hidden;
 }
+.back-nav-content{
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 .back-nav-menu {
   /* display: none; */
@@ -203,5 +218,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: red;
 }
+
+.backnav-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 0.5fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  margin-top: -80px;
+  }
+  
+  .bcknav-div1 { grid-area: 1 / 1 / 4 / 4; padding: 5px; }
+  .bcknav-div2 { grid-area: 1 / 4 / 2 / 5; padding: 5px; }
+  .bcknav-div3 { grid-area: 1 / 5 / 2 / 6; padding: 5px; }
+  .bcknav-div4 { grid-area: 2 / 4 / 3 / 5; padding: 5px; }
+  .bcknav-div5 { grid-area: 2 / 5 / 3 / 6; padding: 5px; }
+  .bcknav-div6 { grid-area: 3 / 4 / 4 / 5; padding: 5px; }
+  .bcknav-div7 { grid-area: 3 / 5 / 4 / 6; padding: 5px; }
+
+  #bcknav_copyright{
+    font-size: 13rem;
+    font-family: "Raleway";
+    font-weight: 600;
+  }
+
+  .backnav-parent > *{
+    transition: 0.3s ease;
+  }
+  .backnav-parent > *:hover:not(.bcknav-div1) {
+    color: #21374d;
+    cursor: pointer;
+  }
