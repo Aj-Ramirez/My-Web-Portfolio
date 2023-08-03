@@ -38,17 +38,28 @@
           transform: scale(0);
           transition: transform 400ms;
         }
-        .line {
-          fill: none;
-          /* stroke: rgb(255, 255, 255); */
-          /* stroke: #128bbe; */
-          stroke: #3782ce;
-          stroke-width: 6px;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-          transform-origin: 50%;
-          transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
-        }
+          .line {
+            fill: none;
+            /* stroke: rgb(255, 255, 255); */
+            /* stroke: #128bbe; */
+            stroke: #3782ce;
+            stroke-width: 6px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transform-origin: 50%;
+            transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+          }
+          .burger.lineOrig{
+            fill: none;
+            /* stroke: rgb(255, 255, 255); */
+            /* stroke: #128bbe; */
+            stroke: #3782ce;
+            stroke-width: 6px;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transform-origin: 50%;
+            transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+          }
         .x .line {
           stroke-width: 5.5px;
         }

@@ -18,17 +18,41 @@ function smoothScroll() {
 
 smoothScroll();
 
+// ANCHOR SECTION
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const main = document.querySelector("main");
+    const yOffset = 0; // You can adjust this value to offset any fixed header/navbar
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }
+}
+
 
 // BURGER NAVIGRATION
 const nav = document.querySelector(".nav-menu");
-const burger = document.querySelector(".burger-nav")
-const backNav = document.querySelector(".back-nav-menu")
+const burger = document.querySelector(".burger-nav");
+const backNav = document.querySelector(".back-nav-menu");
+const menuLink = document.querySelector('.c-work__list');
+const burgerLines = document.querySelector('.plate5');
 
 burger.addEventListener("click", () => {
-     nav.classList.toggle("show-nav");
-     backNav.classList.toggle("back-show-nav");
+  toggleNav();
+});
 
-   });
+menuLink.addEventListener("click", () => {
+  toggleNav();
+  burgerLines.classList.toggle("active"); // Add or remove "active" class for the burger
+});
+
+function toggleNav() {
+  nav.classList.toggle("show-nav");
+  backNav.classList.toggle("back-show-nav");
+  burgerLines.classList.toggle("inactive");
+}
+
 
    function revealMouseWithDelay() {
      const mouse = document.querySelector(".container .mouse");
@@ -36,6 +60,7 @@ burger.addEventListener("click", () => {
    }setTimeout(revealMouseWithDelay, 3000);
 
 
+ 
 
 //    FOR H1 HERO SECTION 
 function isInViewport(element) {
@@ -64,3 +89,15 @@ function isInViewport(element) {
    // Add event listener to activate the animation when scrolling
    window.addEventListener('scroll', activateAnimation);
    
+  //  For Hero Button
+  function changeText(text) {
+    const button = document.querySelector('.button');
+    button.textContent = text;
+  }
+  function scrollToAbout() {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  
