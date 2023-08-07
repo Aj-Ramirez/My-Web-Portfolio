@@ -33,6 +33,7 @@
         }
         .burger {
           filter: url(#gooeyness);
+          transition: transform 0.3s ease;
         }
         .x {
           transform: scale(0);
@@ -109,3 +110,17 @@
    .active.plate5 .x {
      transition: transform 400ms 50ms;
    }
+
+   
+  .burger:hover{
+    transform: scale(.9);
+  }
+  .burger:hover .line{
+    stroke: #2f6dac;  
+  }
+  .active:hover .x {
+    transform: scale(0.9) !important;
+ }
+  .active:hover .x .lines {
+    stroke: #2f6dac;  
+ }

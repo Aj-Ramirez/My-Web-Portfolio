@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Aj_Ramirez.Dev</title>
+        <title>ajramirez.dev</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="nav.css" />
         <link rel="stylesheet" href="burger.css" />
@@ -21,6 +21,7 @@
       
     </head>
     <body>
+      <div class="cursor"></div>
       <div class="burger-nav" > 
          <svg id="burgerNav">
             <defs>
@@ -57,7 +58,8 @@
              <ul class="c-work__list js-work" onclick="this.classList.toggle('active')">
            
                 <!-- WORK ITEM -->
-                <li class="c-work__item">
+                <a id="homelink" href="/">
+                <li class="c-work__item" onclick="scrollToSection('hero')">
                    <div class="c-work-item js-work-item" >
                       <span class="c-work-item__number u-b6">
                          01
@@ -72,6 +74,7 @@
                       </span>
                    </div>
                 </li>
+               </a>
                 <!-- //WORK ITEM -->
                 <!-- WORK ITEM -->
                 
@@ -218,15 +221,18 @@
  
         <div class="smooth-scroll-wrapper">
             <div class="content">
-               <section class="container">
+              
+               <section id="hero" class="container">
                   <div>
                   <svg id="blob-hero" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
                   <path fill="#c6efff" d="M386,335.5Q350,431,243.5,424.5Q137,418,94.5,329Q52,240,94.5,151Q137,62,247,50Q357,38,389.5,139Q422,240,386,335.5Z" />
                </div>
                 </svg>
                      <!-- <p id="name">Aj Ramirez</p> -->
+                  <div class="heroHeadings" style="text-align: center;">
                      <h1 id="heading1" style="color:#fff" class="focus-in-contract-bck blur-out-expand"><span id="front">front</span><span id="end">end</span></h1>
                      <h1 id="heading2" style="color:#fff" class="focus-in-contract-bck blur-out-expand"><span id="dev">developer</span></h1>
+                  </div>
                      
                      <br><br><br><br><br>
                      <div class="body-text-wrapper">
@@ -243,16 +249,28 @@
                     </a>
                </section> 
                <hr/>
-               <section id="about" class="container"> 
-                  <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="1300" id=" ">Section 1</h2> 
-                  <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300">
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
-                       tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
-                       voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
-                       architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
-                       laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
-                       ratione suscipit!
-                   </p>
+               <section id="about" class="container2"> 
+                  <div class="aboutCol1">
+                     <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">about me</h2> 
+                     <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi
+                        tenetur sapiente dolor deleniti. Fuga labore pariatur esse. Repudiandae,
+                        voluptates nisi soluta architecto inventore hic. Omnis eos expedita sed
+                        architecto illum mollitia! Totam aperiam vel consequuntur a, ipsum sapiente sit
+                        laborum exercitationem distinctio labore praesentium veniam accusamus, voluptate
+                        ratione suscipit!
+                     </p>
+                     <div class="social-icons">
+                        social media icons
+                     </div>
+                  </div>
+                  <div class="aboutCol2">
+                     <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">IDE</h2> 
+                     <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
+                        I think it a code editor IDE to
+                     </p>
+                  </div>
+                  
                    
              </section>
                 <p>
@@ -280,10 +298,16 @@
             <footer id="footer">
                <div class="footer-parent">
                     <div class="div1" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"  data-aos-delay="50"> AJ RAMIREZ </div>
-                    <div class="div2" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay=150"> FULLSTACK DEVELOPER </div>
-                    <div class="div3" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"> <i class="fab fa-linkedin"></i> <i class="fab fa-facebook-square"></i> <i class="fab fa-behance-square"></i> <i class="fas fa-share-alt-square"></i>  </div>
-                    <div class="div4" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="250"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
-                    <div class="div5" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="350">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
+                    <div class="div2" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="150"> FRONTEND DEVELOPER </div>
+                    <div class="div3 soc-icon-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"> 
+                        <i class="fab fa-linkedin"></i> 
+                        <i class="fab fa-facebook-square"></i> 
+                        <i class="fab fa-behance-square"></i> 
+                        <i class="fab fa-github-square"></i>
+                        <i class="fas fa-share-alt-square"></i>  
+                     </div>
+                    <div class="div4 my-email-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="250"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
+                    <div class="div5 my-phone-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="350">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
                     <div class="div6" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out" data-aos-duration="1300" data-aos-delay="450"> © 2023 </div>
                     <div class="div7" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="550"> <a href="#"><i class="fas fa-arrow-up"></i></a> </div>
                </div>
@@ -293,13 +317,8 @@
         <script src = "main.js"></script>
         <!-- <script src = "nav.js"></script> -->
           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+          <script src="cursor.js"></script>
         <script>AOS.init();</script>
-        <script>
-         
-         function applyStylesWithColor() {
-           document.getElementById("heading1").style.color = "#111c27";
-           document.getElementById("heading2").style.color = "#3782ce";
-         }setTimeout(applyStylesWithColor, 3000);
-       </script>
+
     </body>
 </html>

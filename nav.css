@@ -46,12 +46,12 @@ box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
 .u-a7 {
   margin: 0;
   font-size: 64px;
-  padding: 60px 60px 0 60px;
+  padding: 60px 60px 0 20px;
 }
 
 .c-work {
   width: 100%;
-  padding: 60px;
+  padding: 0px 60px 0px 60px;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -250,3 +250,9 @@ box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
     color: #21374d;
     cursor: pointer;
   }
+
+  #homelink:hover{
+    color: white;
+  }
+
+  

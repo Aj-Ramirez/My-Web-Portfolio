@@ -96,8 +96,21 @@ function isInViewport(element) {
   }
   function scrollToAbout() {
     const aboutSection = document.getElementById("about");
+   
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   }
+  function scrollToHero() {
+    const heroSection  = document.getElementById("hero")
+   
+    if (heroSection) {
+      heroSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   
+// HEADING TEXT 
+  function applyStylesWithColor() {
+  document.getElementById("heading1").style.color = "#111c27";
+  document.getElementById("heading2").style.color = "#3782ce";
+  }setTimeout(applyStylesWithColor, 3000);
