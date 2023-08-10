@@ -6,6 +6,7 @@ let socIconHover = document.querySelector(".soc-icon-footer");
 let myEmailHover = document.querySelector(".my-email-footer");
 let myPhoneHover = document.querySelector(".my-phone-footer");
 let aboutHover = document.querySelector("#aboutHeading");
+let introHover = document.querySelector("#about-text")
 
 window.addEventListener('mousemove', cursor);
 
@@ -22,7 +23,8 @@ let elementHover = [mouseCursor,
                     socIconHover, 
                     myEmailHover, 
                     myPhoneHover,
-                    aboutHover];
+                    aboutHover,
+                    introHover];
 
 document.addEventListener('mouseover', (e) => {
      let targetElement = e.target;
@@ -32,8 +34,10 @@ document.addEventListener('mouseover', (e) => {
    
      if (isHoveredElement) {
        mouseCursor.classList.add("link-grow");
+       mouseCursor.classList.remove("unlink-grow")
      } else {
        mouseCursor.classList.remove("link-grow");
+       mouseCursor.classList.add("unlink-grow");
      }
    });
 

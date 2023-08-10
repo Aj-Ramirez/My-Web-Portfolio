@@ -95,7 +95,7 @@ function isInViewport(element) {
     button.textContent = text;
   }
   function scrollToAbout() {
-    const aboutSection = document.getElementById("about");
+    const aboutSection = document.getElementById("introduction");
    
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: "smooth" });
@@ -114,3 +114,61 @@ function isInViewport(element) {
   document.getElementById("heading1").style.color = "#111c27";
   document.getElementById("heading2").style.color = "#3782ce";
   }setTimeout(applyStylesWithColor, 3000);
+
+
+  // Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get the paragraph element
+  const paragraph = document.getElementById("about-text");
+
+  // Split the text into words
+  const words = paragraph.innerText.split(/\s+/);
+
+  // Clear the original text content
+  paragraph.innerHTML = "";
+
+  // Create and append span elements for each word
+  words.forEach(word => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      paragraph.appendChild(span);
+  });
+
+  // Add AOS animation attribute to each span
+  const spans = paragraph.querySelectorAll("span");
+  spans.forEach((span, index) => {
+      span.setAttribute("data-aos", "zoom-in-up");
+      span.setAttribute("data-aos-easing", "ease-in-out");
+      span.setAttribute("data-aos-delay", 100 + index * 50); // Adjust delay as needed
+      span.setAttribute("data-aos-duration", 1300);
+  });
+});
+
+
+// Function to handle the intersection changes
+function handleIntersection(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.backgroundColor = "#111c27"; // Change background color
+    } else {
+      entry.target.style.backgroundColor = "white"; // Reset to initial background color
+    }
+  });
+}
+
+// Create an intersection observer
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5 // Adjust threshold as needed
+};
+
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Target the #about element
+const aboutElement = document.getElementById("about");
+
+// Start observing the #about element
+observer.observe(aboutElement);
+

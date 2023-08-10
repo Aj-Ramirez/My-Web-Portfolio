@@ -47,6 +47,8 @@ box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
   margin: 0;
   font-size: 64px;
   padding: 60px 60px 0 20px;
+  font-family: "Poppins";
+  font-weight: 500;
 }
 
 .c-work {
@@ -239,15 +241,17 @@ box-shadow: -1px 0 30.5px 0.5px rgba(11, 17, 23, 0.5);
 
   #bcknav_copyright{
     font-size: 13rem;
-    font-family: "Raleway";
+    font-family: "inter";
     font-weight: 600;
   }
 
   .backnav-parent > *{
     transition: 0.3s ease;
+    color:#ffffffb3;
   }
   .backnav-parent > *:hover:not(.bcknav-div1) {
-    color: #21374d;
+    /* color: #21374d; */
+    color: #fff;
     cursor: pointer;
   }
 
