@@ -203,73 +203,90 @@
              </div>
            </div>
            </div>
-           <div class="back-nav-menu">
-            <div class="back-nav-content">
-               <div class="backnav-parent">
-                  <div class="bcknav-div1"> <h2 id="bcknav_copyright">©2023</h2></div>
-                  <div class="bcknav-div2"> FAQs</div>
-                  <div class="bcknav-div3"> Socials </div>
-                  <div class="bcknav-div4">  </div>
-                  <div class="bcknav-div5">  </div>
-                  <div class="bcknav-div6"> Buy Me a Coffee </div>
-                  <div class="bcknav-div7"> Contact </div>
-               </div>
+            <div class="back-nav-menu">
+               <div class="back-nav-content">
+                  <div class="backnav-parent">
+                     <div class="bcknav-div1"> <h2 id="bcknav_copyright">©2023</h2></div>
+                     <div class="bcknav-div2"> FAQs</div>
+                     <div class="bcknav-div3"> Socials </div>
+                     <div class="bcknav-div4">  </div>
+                     <div class="bcknav-div5">  </div>
+                     <div class="bcknav-div6"> Buy Me a Coffee </div>
+                     <div class="bcknav-div7"> Contact </div>
+                  </div>
+                  
+               </div>           
+            </div>
+
+   
+         <div class="smooth-scroll-wrapper">
+               <div class="content">
                
-            </div>           
-           </div>
-
- 
-        <div class="smooth-scroll-wrapper">
-            <div class="content">
-              
-               <section id="hero" class="container">
-                  <div>
-                  <svg id="blob-hero" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-                  <path fill="#c6efff" d="M386,335.5Q350,431,243.5,424.5Q137,418,94.5,329Q52,240,94.5,151Q137,62,247,50Q357,38,389.5,139Q422,240,386,335.5Z" />
-               </div>
-                </svg>
-                     <!-- <p id="name">Aj Ramirez</p> -->
-                  <div class="heroHeadings" style="text-align: center;">
-                     <h1 id="heading1" style="color:#fff" class="focus-in-contract-bck blur-out-expand"><span id="front">front</span><span id="end">end</span></h1>
-                     <h1 id="heading2" style="color:#fff" class="focus-in-contract-bck blur-out-expand"><span id="dev">developer</span></h1>
+                  <section id="hero" class="container">
+                     <div>
+                     <svg id="blob-hero" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+                     <path fill="#c6efff" d="M386,335.5Q350,431,243.5,424.5Q137,418,94.5,329Q52,240,94.5,151Q137,62,247,50Q357,38,389.5,139Q422,240,386,335.5Z" />
                   </div>
-                     
-                     <br><br><br><br><br>
-                     <div class="body-text-wrapper">
-                        <p id="hero-body-text" class="text-focus-in">Crafting seamless connections between design and functionality to deliver an remarkable user experience. <span style="color: #3782ce;">Let's make it happen!</span> </p>
+                  </svg>
+                        <!-- <p id="name">Aj Ramirez</p> -->
+                     <div class="heroHeadings" style="text-align: center;">
+                        <h1 id="heading1" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
+                           <span id="front"onmouseover="changeTextDev('mobile')" onmouseout="changeTextDev('developer')">front</span>
+                           <span id="end" onmouseover="changeTextDev('web')" onmouseout="changeTextDev('developer')">end</span>
+                        </h1>
+                        <h1 id="heading2" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
+                           <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('art '); changeTextEnd('ramirez')" onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
+                        </h1>
                      </div>
-                     <br><br>
-                     <div class="mouse"></div>
-                     
-                     
-                     <a href="#" onclick="scrollToSection('introduction')">
-                        <button class="button tracking-in-expand" onmouseover="changeText('Buy Me A Coffee')" onmouseout="changeText('Get Started')" onclick="scrollToAbout()">
-                        Get Started
+                        
+                        <br><br><br><br><br>
+                        <div class="body-text-wrapper">
+                           <p id="hero-body-text" class="text-focus-in">Crafting seamless connections between design and functionality to deliver an remarkable user experience. <span style="color: #3782ce;">Let's make it happen!</span> </p>
+                        </div>
+                        <br><br>
+                        <div class="mouse"></div>
+                        
+                        
+                        <a onclick="scrollToSection('introduction')">
+                           <button class="button tracking-in-expand" onmouseover="changeText('Buy Me A Coffee')" onmouseout="changeText('Get Started')" onclick="scrollToIntro()">
+                           Get Started
+                           </button>
+                     </a>
+                  </section> 
+
+                  <section id="introduction" class="feature-container"> 
+                     <p id="about-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="color:#111c27; text-align: center;">
+                           As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
+                     </p>
+                     <br/> <br/>
+                     <a id="showTrigger" onclick="scrollToSection('about')">
+                        <button class="button button1 tracking-in-expand" onmouseover="changeTextIntro('The Surface')" onmouseout="changeTextIntro('See Beyond')">
+                           See Beyond
                         </button>
-                    </a>
-               </section> 
+                     </a>
+                     <span id="bg-intro">
+                        <span>let's make it happen.</span>
+                     </span>
 
-               <section id="introduction" class="feature-container"> 
-                  <p id="about-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="color:#111c27; text-align: center;">
-                        As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
-                  </p>
-                  <span id="bg-intro">
-                     <span>let's</span> <span>make</span> <span>it</span> <span>happen</span>
-                  </span>
+                     <div id="go__down">
+                        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+                        <lottie-player src="https://lottie.host/ee8b7b7f-0935-4bf0-80b6-317f14642118/T5shNM83J1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player> -->
+                        <!-- <svg width="100px" height="100px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#111c27" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15V9C2 6.79086 3.79086 5 6 5Z" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.5 10.75L12 13.25L9.5 10.75" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
+                     </div>
+                  </section>
 
-                  <div id="go__down">
-                     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                     <lottie-player src="https://lottie.host/ee8b7b7f-0935-4bf0-80b6-317f14642118/T5shNM83J1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player> -->
-                     <!-- <svg width="100px" height="100px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#111c27" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15V9C2 6.79086 3.79086 5 6 5Z" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.5 10.75L12 13.25L9.5 10.75" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
-                  </div>
-               </section>
+                  <section id="introduction" class="feature-container__2"> 
+                     <p id="intro-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="text-align: center;">
+                           As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
+                     </p>
+                     
+                   
+                  </section>
 
                <section id="about" class="container2"> 
                   <div class="aboutCol1">
                      <h2 data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">about me</h2> 
-                     <p id="about-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
-                        <!-- As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
-                        <br/><br/> -->
+                     <p id="about-text-1" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
                         Innovation is my muse. I thrive on pushing the boundaries of creativity to deliver dynamic and responsive websites that engage, inspire, and captivate. Every line of code I write is a stroke of innovation, blending the art of design with the magic of technology.
                      </p>
                      <div class="social-icons">

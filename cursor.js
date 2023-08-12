@@ -7,6 +7,7 @@ let myEmailHover = document.querySelector(".my-email-footer");
 let myPhoneHover = document.querySelector(".my-phone-footer");
 let aboutHover = document.querySelector("#aboutHeading");
 let introHover = document.querySelector("#about-text")
+let introBtn = document.querySelector(".button1")
 
 window.addEventListener('mousemove', cursor);
 
@@ -24,7 +25,9 @@ let elementHover = [mouseCursor,
                     myEmailHover, 
                     myPhoneHover,
                     aboutHover,
-                    introHover];
+                    introHover,
+                    introBtn
+                  ];
 
 document.addEventListener('mouseover', (e) => {
      let targetElement = e.target;

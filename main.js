@@ -90,30 +90,56 @@ function isInViewport(element) {
    window.addEventListener('scroll', activateAnimation);
    
   //  For Hero Button
+  function changeTextFront(text) {
+    const front = document.querySelector('#front');
+    front.textContent = text;
+  }
+  function changeTextEnd(text) {
+    const end = document.querySelector('#end');
+    end.textContent = text;
+  }
+  function changeTextDev(text) {
+    const dev = document.querySelector('#dev');
+    dev.textContent = text;
+  }
+  function changeTextHero(text) {
+    const dev = document.querySelector('#dev');
+    dev.textContent = text;
+  }
+
   function changeText(text) {
     const button = document.querySelector('.button');
     button.textContent = text;
   }
+  function changeTextIntro(text) {
+    const button = document.querySelector('.button1');
+    button.textContent = text;
+  }
+
+  function scrollToIntro() {
+    const introSection = document.getElementById("introduction");
+      if (introSection) {
+        introSection.scrollIntoView({ behavior: "smooth" });
+      }
+  }
   function scrollToAbout() {
-    const aboutSection = document.getElementById("introduction");
-   
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
+    const aboutSection = document.getElementById("about");
+      if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: "smooth" });
+      }
   }
   function scrollToHero() {
     const heroSection  = document.getElementById("hero")
-   
-    if (heroSection) {
-      heroSection.scrollIntoView({ behavior: "smooth" });
-    }
+      if (heroSection) {
+        heroSection.scrollIntoView({ behavior: "smooth" });
+      }
   }
   
 // HEADING TEXT 
   function applyStylesWithColor() {
   document.getElementById("heading1").style.color = "#111c27";
   document.getElementById("heading2").style.color = "#3782ce";
-  }setTimeout(applyStylesWithColor, 3000);
+  }setTimeout(applyStylesWithColor, 2000);
 
 
   // Wait for the DOM to be fully loaded
@@ -145,12 +171,41 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Text reveal when present in the viewport
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Get the paragraph element
+  const paragraph = document.getElementById("intro-text");
+
+  // Split the text into words
+  const words = paragraph.innerText.split(/\s+/);
+
+  // Clear the original text content
+  paragraph.innerHTML = "";
+
+  // Create and append span elements for each word
+  words.forEach(word => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      paragraph.appendChild(span);
+  });
+
+  // Add AOS animation attribute to each span
+  const spans = paragraph.querySelectorAll("span");
+  spans.forEach((span, index) => {
+      span.setAttribute("data-aos", "zoom-in-up");
+      span.setAttribute("data-aos-easing", "ease-in-out");
+      span.setAttribute("data-aos-delay", 100 + index * 50); // Adjust delay as needed
+      span.setAttribute("data-aos-duration", 1300);
+  });
+});
 
 // Function to handle the intersection changes
 function handleIntersection(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.style.backgroundColor = "#111c27"; // Change background color
+      entry.target.style.transition = "background-color 1.5s ease"; // Add smooth transition
     } else {
       entry.target.style.backgroundColor = "white"; // Reset to initial background color
     }
@@ -171,4 +226,30 @@ const aboutElement = document.getElementById("about");
 
 // Start observing the #about element
 observer.observe(aboutElement);
+
+// Function to handle the intersection changes for the reveal trigger
+function handleReveal(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible"); // Add a CSS class to reveal the button
+      observer.unobserve(entry.target); // Stop observing once revealed
+    }
+  });
+}
+
+// Create an intersection observer for the reveal trigger
+const showOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5 // Adjust threshold as needed
+};
+
+const showObserver = new IntersectionObserver(handleReveal, showOptions);
+
+// Target the reveal trigger element
+const showTrigger = document.getElementById("showTrigger");
+
+// Start observing the reveal trigger element
+showObserver.observe(showTrigger);
+
 
