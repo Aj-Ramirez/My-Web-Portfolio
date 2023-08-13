@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+   <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ajramirez.dev</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="nav.css" />
         <link rel="stylesheet" href="burger.css" />
-        <!-- <link rel="stylesheet" href="hero.css" />
-        <script src="hero2.js"></script> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FONT__AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- AOS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
          <!-- Include GSAP (TweenMax) via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <!-- Include PIXI.js via CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+         <!-- Include PIXI.js via CDN -->
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.3.3/pixi.min.js"></script>
       
-    </head>
-    <body>
+   </head>
+   <body>
       <div class="cursor"></div>
       <div class="burger-nav" > 
          <svg id="burgerNav">
             <defs>
-            <filter id="gooeyness">
-               <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
-               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
-               <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
-            </filter>
+               <filter id="gooeyness">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness" />
+                  <feComposite in="SourceGraphic" in2="gooeyness" operator="atop" />
+               </filter>
             </defs>
          </svg>
+
          <div class="plate plate5" onclick="this.classList.toggle('active')">
             <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-            <path class="line line1" d="M 30,35 H 70 " />
-            <path class="line line2" d="M 50,50 H 30 L 34,32" />
-            <path class="line line3" d="M 50,50 H 70 L 66,68" />
-            <path class="line line4" d="M 30,65 H 70 " />
+               <path class="line line1" d="M 30,35 H 70 " />
+               <path class="line line2" d="M 50,50 H 30 L 34,32" />
+               <path class="line line3" d="M 50,50 H 70 L 66,68" />
+               <path class="line line4" d="M 30,65 H 70 " />
             </svg>
 
             <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
-            <path class="line" d="M 34,32 L 66,68" />
-            <path class="line" d="M 66,32 L 34,68" />
+               <path class="line" d="M 34,32 L 66,68" />
+               <path class="line" d="M 66,32 L 34,68" />
             </svg>
          </div>
       </div>   
@@ -53,294 +52,212 @@
                aj ramirez
                </h2>
          </div>
-           
-           <div class="c-work">
-             <ul class="c-work__list js-work" onclick="this.classList.toggle('active')">
-           
-                <!-- WORK ITEM -->
-                <a id="homelink" href="/">
-                <li class="c-work__item" onclick="scrollToSection('hero')">
-                   <div class="c-work-item js-work-item" >
-                      <span class="c-work-item__number u-b6">
-                         01
-                      </span>
-                      <div class="c-work-item__title">
-                         <h3 class="u-a6">
-                            Home
-                         </h3>
-                      </div>
-                      <span class="c-work-item__category u-b4">
-                         <i>/</i>This is me how to build my home 
-                      </span>
-                   </div>
-                </li>
-               </a>
-                <!-- //WORK ITEM -->
-                <!-- WORK ITEM -->
-                
-                  <li class="c-work__item" onclick="scrollToSection('about')">
-                     <div class="c-work-item js-work-item">
-                        <span class="c-work-item__number u-b6">
-                           02
-                        </span>
+         
+         <div class="c-work">
+            <ul class="c-work__list js-work" onclick="this.classList.toggle('active')">
+<!-- LIST ITEM --><a id="homelink" href="/">
+                  <li class="c-work__item" onclick="scrollToSection('hero')">
+                     <div class="c-work-item js-work-item" >
+                        <span class="c-work-item__number u-b6"> 01 </span>
                         <div class="c-work-item__title">
-                           <h3 class="u-a6">
-                              Experience
-                           </h3>
+                           <h3 class="u-a6"> Home </h3>
+                        </div>
+                        <span class="c-work-item__category u-b4">
+                           <i>/</i>This is me how to build my home 
+                        </span>
+                     </div>
+                  </li>
+               </a> <!-- //END-->
+            
+<!-- LIST ITEM --><li class="c-work__item" onclick="scrollToSection('about')">
+                     <div class="c-work-item js-work-item">
+                        <span class="c-work-item__number u-b6"> 02 </span>
+                        <div class="c-work-item__title">
+                           <h3 class="u-a6"> Experience </h3>
                         </div>
                         <span class="c-work-item__category u-b4">
                            <i>/</i>Know me more
                         </span>
                      </div>
-                  </li>
+                  </li> <!-- //END-->
                
-                <!-- //WORK ITEM -->
-                <!-- WORK ITEM -->
-                <li class="c-work__item">
-                   <div class="c-work-item js-work-item">
-                      <span class="c-work-item__number u-b6">
-                         03
-                      </span>
-                      <div class="c-work-item__title">
-                         <h3 class="u-a6">
-                            Projects
-                         </h3>
-                      </div>
-                      <span class="c-work-item__category u-b4">
-                         <i>/</i>My workhard and worksmart 
-                      </span>
-                   </div>
-                </li>
-                <!-- //WORK ITEM -->
-                <!-- WORK ITEM -->
-                <li class="c-work__item">
-                   <div class="c-work-item js-work-item">
-                      <span class="c-work-item__number u-b6">
-                         04
-                      </span>
-                      <div class="c-work-item__title">
-                         <h3 class="u-a6">
-                            Contact Me
-                         </h3>
-                      </div>
-                      <span class="c-work-item__category u-b4">
-                         <i>/</i>Let us be connected
-                      </span>
-                   </div>
-                </li>
-                <!-- //WORK ITEM -->
-                <!-- WORK ITEM -->
-                <li class="c-work__item">
-                   <div class="c-work-item js-work-item">
-                      <span class="c-work-item__number u-b6">
-                         05
-                      </span>
-                      <div class="c-work-item__title">
-                         <h3 class="u-a6">
-                            Tap me
-                         </h3>
-                      </div>
-                      <span class="c-work-item__category u-b4">
-                         <i>/</i>Give me a chance to know you more
-                      </span>
-                   </div>
-                </li>
-                <!-- //WORK ITEM -->
-                <!-- WORK ITEM -->
-                <!-- <li class="c-work__item">
-                   <div class="c-work-item js-work-item">
-                      <span class="c-work-item__number u-b6">
-                         06
-                      </span>
-                      <div class="c-work-item__title">
-                         <h3 class="u-a6">
-                            Prada x Diesel
-                         </h3>
-                      </div>
-                      <span class="c-work-item__category u-b4">
-                         <i>/</i>Website
-                      </span>
-                   </div>
-                </li> -->
-                <!-- //WORK ITEM -->
-             </ul>
-             <div class="c-work-preview">
-                <div class="c-work-preview__canvas">
-                   <div class="canvas js-work-preview-canvas"></div>
-                </div>
-                <ul class="c-work-preview__list js-work-preview-list">
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                   <!-- WORK ITEM PREVIEW -->
-                   <li class="c-work-preview__item">
-                      <i class="c-work-preview__image js-work-preview"></i>
-                   </li>
-                   <!-- //WORK ITEM PREVIEW -->
-                </ul>
-             </div>
-           </div>
-           </div>
-            <div class="back-nav-menu">
-               <div class="back-nav-content">
-                  <div class="backnav-parent">
-                     <div class="bcknav-div1"> <h2 id="bcknav_copyright">©2023</h2></div>
-                     <div class="bcknav-div2"> FAQs</div>
-                     <div class="bcknav-div3"> Socials </div>
-                     <div class="bcknav-div4">  </div>
-                     <div class="bcknav-div5">  </div>
-                     <div class="bcknav-div6"> Buy Me a Coffee </div>
-                     <div class="bcknav-div7"> Contact </div>
-                  </div>
-                  
-               </div>           
-            </div>
-
-   
-         <div class="smooth-scroll-wrapper">
-               <div class="content">
-               
-                  <section id="hero" class="container">
-                     <div>
-                     <svg id="blob-hero" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-                     <path fill="#c6efff" d="M386,335.5Q350,431,243.5,424.5Q137,418,94.5,329Q52,240,94.5,151Q137,62,247,50Q357,38,389.5,139Q422,240,386,335.5Z" />
-                  </div>
-                  </svg>
-                        <!-- <p id="name">Aj Ramirez</p> -->
-                     <div class="heroHeadings" style="text-align: center;">
-                        <h1 id="heading1" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
-                           <span id="front"onmouseover="changeTextDev('mobile')" onmouseout="changeTextDev('developer')">front</span>
-                           <span id="end" onmouseover="changeTextDev('web')" onmouseout="changeTextDev('developer')">end</span>
-                        </h1>
-                        <h1 id="heading2" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
-                           <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('art '); changeTextEnd('ramirez')" onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
-                        </h1>
-                     </div>
-                        
-                        <br><br><br><br><br>
-                        <div class="body-text-wrapper">
-                           <p id="hero-body-text" class="text-focus-in">Crafting seamless connections between design and functionality to deliver an remarkable user experience. <span style="color: #3782ce;">Let's make it happen!</span> </p>
+<!-- LIST ITEM --><li class="c-work__item">
+                     <div class="c-work-item js-work-item">
+                        <span class="c-work-item__number u-b6"> 03 </span>
+                        <div class="c-work-item__title">
+                           <h3 class="u-a6"> Projects </h3>
                         </div>
-                        <br><br>
-                        <div class="mouse"></div>
-                        
-                        
-                        <a onclick="scrollToSection('introduction')">
-                           <button class="button tracking-in-expand" onmouseover="changeText('Buy Me A Coffee')" onmouseout="changeText('Get Started')" onclick="scrollToIntro()">
-                           Get Started
-                           </button>
-                     </a>
-                  </section> 
-
-                  <section id="introduction" class="feature-container"> 
-                     <p id="about-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="color:#111c27; text-align: center;">
-                           As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
-                     </p>
-                     <br/> <br/>
-                     <a id="showTrigger" onclick="scrollToSection('about')">
-                        <button class="button button1 tracking-in-expand" onmouseover="changeTextIntro('The Surface')" onmouseout="changeTextIntro('See Beyond')">
-                           See Beyond
-                        </button>
-                     </a>
-                     <span id="bg-intro">
-                        <span>let's make it happen.</span>
-                     </span>
-
-                     <div id="go__down">
-                        <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
-                        <lottie-player src="https://lottie.host/ee8b7b7f-0935-4bf0-80b6-317f14642118/T5shNM83J1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player> -->
-                        <!-- <svg width="100px" height="100px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#111c27" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15V9C2 6.79086 3.79086 5 6 5Z" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.5 10.75L12 13.25L9.5 10.75" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
+                        <span class="c-work-item__category u-b4">
+                           <i>/</i>My workhard and worksmart 
+                        </span>
                      </div>
-                  </section>
-
-                  <section id="introduction" class="feature-container__2"> 
-                     <p id="intro-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="text-align: center;">
-                           As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
-                     </p>
-                     
-                   
-                  </section>
-
-               <section id="about" class="container2"> 
-                  <div class="aboutCol1">
-                     <h2 data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">about me</h2> 
-                     <p id="about-text-1" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
-                        Innovation is my muse. I thrive on pushing the boundaries of creativity to deliver dynamic and responsive websites that engage, inspire, and captivate. Every line of code I write is a stroke of innovation, blending the art of design with the magic of technology.
-                     </p>
-                     <div class="social-icons">
-                        social media icons
+                  </li> <!-- //END -->
+               
+<!-- LIST ITEM --><li class="c-work__item">
+                     <div class="c-work-item js-work-item">
+                        <span class="c-work-item__number u-b6"> 04 </span>
+                        <div class="c-work-item__title">
+                           <h3 class="u-a6"> Contact Me </h3>
+                        </div>
+                        <span class="c-work-item__category u-b4">
+                           <i>/</i>Let us be connected
+                        </span>
                      </div>
-                  </div>
-                  <!-- <div class="aboutCol2">
-                     <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">IDE</h2> 
-                     <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
-                        I think it a code editor IDE to
-                     </p>
-                  </div> -->
-                  
-                   
-             </section>
+                  </li><!-- //END -->
+               
+<!-- LIST ITEM --><li class="c-work__item">
+                     <div class="c-work-item js-work-item">
+                        <span class="c-work-item__number u-b6"> 05 </span>
+                        <div class="c-work-item__title">
+                           <h3 class="u-a6"> Tap me </h3>
+                        </div>
+                        <span class="c-work-item__category u-b4">
+                        <i>/</i>Give me a chance to know you more
+                        </span>
+                     </div>
+                  </li>
+            </ul>
+         </div>
+      </div>
 
-
-                 <section class="container"> 
-                  <h2>Experience</h2>
-               </section>
-             
-      
-               <section class="container bg-dark"> Section 3 </section>
-               <section class="container"> <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out"   data-aos-delay="50">Section 3</p> </section> 
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
-                    repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
-                </p>
+      <!-- BACK__NAVIGATION -->
+      <div class="back-nav-menu">
+         <div class="back-nav-content">
+            <div class="backnav-parent">
+               <div class="bcknav-div1"><h2 id="bcknav_copyright"> ©2023 </h2></div>
+               <div class="bcknav-div2"> FAQs</div>
+               <div class="bcknav-div3"> Socials </div>
+               <div class="bcknav-div4">  </div>
+               <div class="bcknav-div5">  </div>
+               <div class="bcknav-div6"> Buy Me a Coffee </div>
+               <div class="bcknav-div7"> Contact </div>
             </div>
-            <footer id="footer">
-               <div class="footer-parent">
-                    <div  id="footer-logo" class="div1" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"  data-aos-delay="50"> aj ramirez </div>
-                    <div class="div2" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="150"> FRONTEND DEVELOPER </div>
-                    <div class="div3 soc-icon-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"> 
-                        <i class="fab fa-linkedin"></i> 
-                        <i class="fab fa-facebook-square"></i> 
-                        <i class="fab fa-behance-square"></i> 
-                        <i class="fab fa-github-square"></i>
-                        <i class="fas fa-share-alt-square"></i>  
-                     </div>
-                    <div class="div4 my-email-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="250"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
-                    <div class="div5 my-phone-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="350">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
-                    <div class="div6" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out" data-aos-duration="1300" data-aos-delay="450"> © 2023 </div>
-                    <div class="div7" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="550"> <a href="#"><i class="fas fa-arrow-up"></i></a> </div>
-               </div>
-             </footer>
-        </div>
-        
-        <script src = "main.js"></script>
-        <!-- <script src = "nav.js"></script> -->
-          <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-          <script src="cursor.js"></script>
-        <script>AOS.init();</script>
+         </div>           
+      </div>
 
-    </body>
+<!-- MAIN__SCROLL__WRAPPER -->
+<div class="smooth-scroll-wrapper">
+   <div class="content">
+      <section id="hero" class="container">
+         <div> <!-- BLOB__HERO -->
+            <svg id="blob-hero" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+            <path fill="#c6efff" d="M386,335.5Q350,431,243.5,424.5Q137,418,94.5,329Q52,240,94.5,151Q137,62,247,50Q357,38,389.5,139Q422,240,386,335.5Z" />
+            </svg>
+         </div>
+            <!-- <p id="name">Presented</p> -->
+         <div class="heroHeadings" style="text-align: center;">
+            <h1 id="heading1" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
+               <span id="front" onmouseover="changeTextDev('mobile')" onmouseout="changeTextDev('developer')">front</span><span id="end" onmouseover="changeTextDev('web')" onmouseout="changeTextDev('developer')">end</span>
+            </h1>
+            <h1 id="heading2" style="color:#fff" class="focus-in-contract-bck blur-out-expand">
+               <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('art '); changeTextEnd('ramirez')" onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
+            </h1>
+         </div>
+<br><br><br><br><br>
+         <div class="body-text-wrapper">
+            <p id="hero-body-text" class="text-focus-in">Crafting seamless connections between design and functionality to deliver an remarkable user experience. <span style="color: #3782ce;">Let's make it happen!</span> </p>
+         </div>
+<br><br>
+
+         <a onclick="scrollToSection('introduction')">
+            <button class="button tracking-in-expand" onmouseover="changeText('Buy Me A Coffee')" onmouseout="changeText('Get Started')" onclick="scrollToIntro()">
+            Get Started
+            </button>
+         </a>
+
+         <div class="mouse"></div>
+      </section> 
+
+      <section id="introduction" class="feature-container"> 
+         <p id="about-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="color:#111c27; text-align: center;">
+               As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
+         </p>
+<br/> <br/>
+         <a id="showTrigger" onclick="scrollToSection('about')">
+            <button class="button button1" data-aos="zoom-in" data-aos-delay="3000" data-aos-duration="700" onmouseover="changeTextIntro('The Surface')" onmouseout="changeTextIntro('See Beyond')">
+               See Beyond
+            </button>
+         </a>
+
+         <span id="bg-intro">
+            <span>let's make it happen.</span>
+         </span>
+
+         <div id="go__down">
+            <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+            <lottie-player src="https://lottie.host/ee8b7b7f-0935-4bf0-80b6-317f14642118/T5shNM83J1.json" background="transparent" speed="1" style="width: 100px; height: 100px;" loop autoplay></lottie-player> -->
+            <!-- <svg width="100px" height="100px" viewBox="0 0 24.00 24.00" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#111c27" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path d="M6 5H18C20.2091 5 22 6.79086 22 9V15C22 17.2091 20.2091 19 18 19H6C3.79086 19 2 17.2091 2 15V9C2 6.79086 3.79086 5 6 5Z" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14.5 10.75L12 13.25L9.5 10.75" stroke="#000000" stroke-width="1.3679999999999999" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg> -->
+         </div>
+      </section>
+
+      <!-- <section id="introduction" class="feature-container__2"> 
+         <p id="intro-text" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300" style="text-align: center;">
+               As a digital artisan, I combine my love for design and coding to breathe life into pixels. With an eye for aesthetics and a keen sense of user-centric design, I transform ideas into visually stunning and interactive web solutions.
+         </p>
+      </section> -->
+
+      <section id="about" class="container2"> 
+         <div class="aboutCol1">
+            <h2 data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">about me</h2> 
+            <p id="about-text-1" data-aos="fade-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
+               Innovation is my muse. I thrive on pushing the boundaries of creativity to deliver dynamic and responsive websites that engage, inspire, and captivate. Every line of code I write is a stroke of innovation, blending the art of design with the magic of technology.
+            </p>
+            <div class="social-icons">
+               social media icons
+            </div>
+         </div>
+         <!-- <div class="aboutCol2">
+            <h2 data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="800" data-aos-duration="1300" id="aboutHeading">IDE</h2> 
+            <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-delay="1000" data-aos-duration="1300">
+               I think it a code editor IDE to
+            </p>
+         </div> -->
+      </section>
+
+      <section class="container"> 
+         <h2>Experience</h2>
+      </section>
+   
+      <section class="container bg-dark"> Section 3 </section>
+      <section class="container"> <p  data-aos="zoom-in-up" data-aos-easing="ease-in-out"   data-aos-delay="50">Section 3</p> 
+      </section> 
+
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ea nihil quibusdam
+            repudiandae praesentium quisquam eos, repellendus fugiat dolore! Neque.
+         </p>
+
+   </div> <!-- END__OF__CONTENT -->
+
+   <footer id="footer">
+      <div class="footer-parent">
+         <div  id="footer-logo" class="div1" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"  data-aos-delay="50"> aj ramirez </div>
+
+         <div class="div2" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="150"> FRONTEND DEVELOPER </div>
+
+         <div class="div3 soc-icon-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300"> 
+               <i class="fab fa-linkedin"></i> 
+               <i class="fab fa-facebook-square"></i> 
+               <i class="fab fa-behance-square"></i> 
+               <i class="fab fa-github-square"></i>
+               <i class="fas fa-share-alt-square"></i>  
+         </div>
+
+         <div class="div4 my-email-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="250"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
+
+         <div class="div5 my-phone-footer" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="350">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
+
+         <div class="div6" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out" data-aos-duration="1300" data-aos-delay="450"> © 2023 </div>
+
+         <div class="div7" data-aos="fade-up-left" data-aos-anchor-placement="bottom-bottom"data-aos-easing="ease-in-out"  data-aos-duration="1300" data-aos-delay="550"> <a href="#"><i class="fas fa-arrow-up"></i></a> </div>
+      </div> <!-- END FOOTER -->
+   </footer>
+</div> <!-- END__MAIN__WRAPPER -->
+
+      <script src = "main.js"></script>
+      <!-- <script src = "nav.js"></script> -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="cursor.js"></script>
+      <script>AOS.init();</script>
+   </body>
 </html>

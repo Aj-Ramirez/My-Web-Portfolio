@@ -1,3 +1,4 @@
+// SMOOTH__SCROLL
 const body = document.body,
 scrollWrap = document.getElementsByClassName("smooth-scroll-wrapper")[0],
 height = scrollWrap.getBoundingClientRect().height - 1,
@@ -28,41 +29,40 @@ function scrollToSection(sectionId) {
 
     window.scrollTo({ top: y, behavior: "smooth" });
   }
-}
+} 
+// END__SMOOTH__SCROLL
 
-
-// BURGER NAVIGRATION
+// BURGER__NAVIGRATION 
 const nav = document.querySelector(".nav-menu");
 const burger = document.querySelector(".burger-nav");
 const backNav = document.querySelector(".back-nav-menu");
 const menuLink = document.querySelector('.c-work__list');
 const burgerLines = document.querySelector('.plate5');
 
-burger.addEventListener("click", () => {
-  toggleNav();
-});
+  burger.addEventListener("click", () => {
+    toggleNav();
+  });
 
-menuLink.addEventListener("click", () => {
-  toggleNav();
-  burgerLines.classList.toggle("active"); // Add or remove "active" class for the burger
-});
+  menuLink.addEventListener("click", () => {
+    toggleNav();
+    burgerLines.classList.toggle("active"); // Add or remove "active" class for the burger
+  });
 
-function toggleNav() {
-  nav.classList.toggle("show-nav");
-  backNav.classList.toggle("back-show-nav");
-  burgerLines.classList.toggle("inactive");
-}
+    function toggleNav() {
+      nav.classList.toggle("show-nav");
+      backNav.classList.toggle("back-show-nav");
+      burgerLines.classList.toggle("inactive");
+    }
+// END__NAV
 
+// MOUSE__REVEAL
+function revealMouseWithDelay() {
+  const mouse = document.querySelector(".container .mouse");
+  mouse.classList.add("mouse-wheel");
+}setTimeout(revealMouseWithDelay, 7000);
+// END
 
-   function revealMouseWithDelay() {
-     const mouse = document.querySelector(".container .mouse");
-     mouse.classList.add("mouse-wheel");
-   }setTimeout(revealMouseWithDelay, 7000);
-
-
- 
-
-//    FOR H1 HERO SECTION 
+// FOR H1 HERO SECTION COLOR FILL  
 function isInViewport(element) {
      const rect = element.getBoundingClientRect();
      return (
@@ -72,26 +72,22 @@ function isInViewport(element) {
      );
    }
    
-   function activateAnimation() {
-     const heading1 = document.getElementById('heading1');
-     const heading2 = document.getElementById('heading2');
-     if (isInViewport(heading1)) {
-       heading1.classList.add('animate');
-       heading2.classList.add('animate');
-     }
-       
-     
-   }
-   
-   // Initial check in case the element is already in the viewport on page load
-   activateAnimation();
-   
-   // Add event listener to activate the animation when scrolling
-   window.addEventListener('scroll', activateAnimation);
-   
-  //  For Hero Button
+function activateAnimation() {
+  const heading1 = document.getElementById('heading1');
+  const heading2 = document.getElementById('heading2');
+  if (isInViewport(heading1)) {
+    heading1.classList.add('animate');
+    heading2.classList.add('animate');
+  }
+}
+  activateAnimation();
+
+  window.addEventListener('scroll', activateAnimation);
+ // END 
+
+  //  HERO BTN AND HEADING CHANGE TEXT
   function changeTextFront(text) {
-    const front = document.querySelector('#front');
+    const front = document.querySelector('#front'); 
     front.textContent = text;
   }
   function changeTextEnd(text) {
@@ -106,15 +102,16 @@ function isInViewport(element) {
     const dev = document.querySelector('#dev');
     dev.textContent = text;
   }
-
   function changeText(text) {
     const button = document.querySelector('.button');
     button.textContent = text;
   }
+
   function changeTextIntro(text) {
     const button = document.querySelector('.button1');
     button.textContent = text;
   }
+  // END
 
   function scrollToIntro() {
     const introSection = document.getElementById("introduction");
@@ -135,24 +132,21 @@ function isInViewport(element) {
       }
   }
   
-// HEADING TEXT 
+// HEADING TEXT FILL ANIMATION
   function applyStylesWithColor() {
   document.getElementById("heading1").style.color = "#111c27";
   document.getElementById("heading2").style.color = "#3782ce";
   }setTimeout(applyStylesWithColor, 2000);
 
 
-  // Wait for the DOM to be fully loaded
+  // REVEAL EVERY TEXT PARAGRAPH
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Get the paragraph element
   const paragraph = document.getElementById("about-text");
 
-  // Split the text into words
-  const words = paragraph.innerText.split(/\s+/);
+  const words = paragraph.innerText.split(/\s+/); // Split the text into words
 
-  // Clear the original text content
-  paragraph.innerHTML = "";
+  paragraph.innerHTML = ""; // Clear the original text content
 
   // Create and append span elements for each word
   words.forEach(word => {
@@ -174,14 +168,11 @@ document.addEventListener("DOMContentLoaded", function () {
 // Text reveal when present in the viewport
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Get the paragraph element
-  const paragraph = document.getElementById("intro-text");
+  const paragraph = document.getElementById("intro-text"); // Get the paragraph element
 
-  // Split the text into words
-  const words = paragraph.innerText.split(/\s+/);
+  const words = paragraph.innerText.split(/\s+/); // Split the text into words
 
-  // Clear the original text content
-  paragraph.innerHTML = "";
+  paragraph.innerHTML = ""; // Clear the original text content
 
   // Create and append span elements for each word
   words.forEach(word => {
@@ -199,8 +190,9 @@ document.addEventListener("DOMContentLoaded", function () {
       span.setAttribute("data-aos-duration", 1300);
   });
 });
+// END
 
-// Function to handle the intersection changes
+// FILL BG-COLOR WHEN IN VIEWPORT
 function handleIntersection(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -211,7 +203,6 @@ function handleIntersection(entries) {
     }
   });
 }
-
 // Create an intersection observer
 const options = {
   root: null,
@@ -220,12 +211,8 @@ const options = {
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
-
-// Target the #about element
-const aboutElement = document.getElementById("about");
-
-// Start observing the #about element
-observer.observe(aboutElement);
+const aboutElement = document.getElementById("about"); // Target the #about element
+observer.observe(aboutElement); // Start observing the #about element
 
 // Function to handle the intersection changes for the reveal trigger
 function handleReveal(entries, observer) {
@@ -236,6 +223,7 @@ function handleReveal(entries, observer) {
     }
   });
 }
+// END
 
 // Create an intersection observer for the reveal trigger
 const showOptions = {

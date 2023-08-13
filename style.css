@@ -465,6 +465,7 @@ h1 {
   #front, #end ,#dev{
   transition: color 0.3s;  
   line-height: 90%;
+  position: relative;
 }
   #front:hover, #end:hover{
     color: white;
@@ -474,6 +475,24 @@ h1 {
     color: white;
     -webkit-text-stroke: 1.5px #111c27;
   }
+  /* #dev::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100;
+    padding:0px 10px 0px 10px;
+    height: 1;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: #111c27 !important;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  #dev:hover::before {
+    scale: 1;
+  } */
 
   
 /* Cursor Style  */
@@ -686,4 +705,5 @@ h1 {
   color: #111c27;
   text-align: center;
 }
+
 

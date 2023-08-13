@@ -11,7 +11,6 @@ let introBtn = document.querySelector(".button1")
 
 window.addEventListener('mousemove', cursor);
 
-
 function cursor (e) {
      mouseCursor.style.top = e.pageY + 'px';
      mouseCursor.style.left = e.pageX + 'px';
@@ -41,8 +40,8 @@ document.addEventListener('mouseover', (e) => {
      } else {
        mouseCursor.classList.remove("link-grow");
        mouseCursor.classList.add("unlink-grow");
-     }
-   });
+      }
+});
 
 
    
