@@ -241,3 +241,67 @@ const showTrigger = document.getElementById("showTrigger");
 showObserver.observe(showTrigger);
 
 
+
+
+
+
+
+
+// gsap.registerPlugin(ScrollTrigger);
+// let containerhrz1 = document.querySelector(".hrz-container.hrz1");
+// let sectionshrz1 = gsap.utils.toArray(".hrz-container.hrz1 .sec");
+
+// let tl1 = gsap.timeline({
+//   scrollTrigger: {
+//     pin: true,
+//     scrub: 1,
+//     trigger: containerhrz1,
+//     invalidateOnRefresh: true,
+//     end: () => "+=" + (containerhrz1.scrollWidth - document.documentElement.clientWidth)
+//   }
+// });
+// tl1.to(sectionshrz1, {
+//   x: () => -(containerhrz1.scrollWidth - document.documentElement.clientWidth) + "px",
+//   duration: 1,
+//   ease: "none"
+// }, 0.05);
+// tl1.to({}, {duration: 0.1}); // some padding at the end
+
+
+
+const stickySection = [...document.querySelectorAll('.h_scroll_row')]
+
+let images = [
+
+  'https://dr.savee-cdn.com/things/6/4/82cc78905b3becf0f56637.webp',
+  'https://dr.savee-cdn.com/things/6/4/82cc78905b3becf0f56637.webp',
+  'https://dr.savee-cdn.com/things/6/4/82cc78905b3becf0f56637.webp',
+  'https://dr.savee-cdn.com/things/6/4/82cc78905b3becf0f56637.webp',
+]
+
+images.forEach(img => {
+  stickySection.forEach(section => {
+    let image = document.createElement('img');
+    image.src = img;
+    section.querySelector('.scroll_section').appendChild(image)
+  })
+})
+
+window.addEventListener('scroll', (e) => {
+  for(let i = 0;  i < stickySection.length; i++){
+      transform(stickySection[i])
+  }
+})
+
+function transform(section){
+  const offSetTop = section.parentElement.offsetTop;
+  const scrollSection = section.querySelector('.scroll_section')
+
+  let percentage = ( (window.scrollY - offsetTop) / window.innerHeight) * 100;
+  percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage;
+  scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0 , 0)`
+
+}
+
+
+

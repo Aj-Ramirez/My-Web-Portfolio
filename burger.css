@@ -7,12 +7,20 @@
           margin: 0;
         } */
         
-        svg {
+        /* svg {
           height: 80px;
           position: fixed;
           z-index: 100;
           top: 10px;
           right: 10px;
+          width: 80px;
+        } */
+        .burgerNav, .burger, .x {
+          height: 80px;
+          position: fixed;
+          z-index: 100;
+          top: 30px;
+          right: 30px;
           width: 80px;
         }
         .plates {
