@@ -13,7 +13,7 @@ let xrayText = document.querySelector(".hiddenarea")
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mousedown', handleMouseDown);
 window.addEventListener('mouseup', handleMouseUp);
-window.addEventListener('wheel', handleMouseScrollStart); // Listen for mouse scroll start
+window.addEventListener('wheel', handleMouseScrollStart);
 window.addEventListener('mousemove', handleMouseScrollEnd); 
 
 
@@ -32,12 +32,12 @@ function handleMouseUp() {
 function handleMouseScrollStart() {
   isMouseScroll = true;
   mouseCursor.classList.add("scrollMouse");
-  // clearTimeout(scrollTimeout);
 }
 
 function handleMouseScrollEnd() {
-  isMouseScroll = false;
-  mouseCursor.classList.remove("scrollMouse");
+     isMouseScroll = false;
+      mouseCursor.classList.remove("scrollMouse")
+  
 }
 
 

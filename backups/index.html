@@ -49,14 +49,17 @@
 <div class="container">
 
   <section class="hero" data-bgcolor="#fff" data-textcolor="#8b949a">
-     
     <div class="heroHeadings" style="text-align: center;">
        
-       <h1 id="heading1" data-scroll data-scroll-direction="vertical" data-scroll-speed="5" style="color:#111c27" class="tracking-in-contract-bck-top">
-          <span id="front" onmouseover="changeTextDev('mobile')" onmouseout="changeTextDev('developer')">front</span><span id="end" onmouseover="changeTextDev('web')" onmouseout="changeTextDev('developer')">end</span>
+       <h1 id="heading1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5">
+          <div class="tracking-in-contract-bck-top">
+            <span id="front" onmouseover="changeTextDev('mobile')" onmouseout="changeTextDev('developer')">front</span><span id="end" onmouseover="changeTextDev('web')" onmouseout="changeTextDev('developer')">end</span>
+          </div>
        </h1>
-       <h1 id="heading2" class="tracking-in-contract-bck-bottom" data-scroll  data-scroll-direction="vertical" data-scroll-speed="3">
-          <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('full'); changeTextEnd('stack')" onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
+       <h1 id="heading2" data-scroll  data-scroll-direction="vertical" data-scroll-speed="0.5">
+          <div class="tracking-in-contract-bck-bottom">
+            <span id="dev" onmouseover="changeTextDev('designer'); changeTextFront('full'); changeTextEnd('stack')" onmouseout="changeTextDev('developer'); changeTextFront('front'); changeTextEnd('end')">developer</span>
+          </div>
        </h1>
     </div>
 <br><br><br>
@@ -73,12 +76,22 @@
     <div class="mouse"></div>
    </section>
 
-  <!-- <section id="hero" data-textcolor="#1fc2f0" data-bgcolor="#fff">
+  <section id="hero" data-textcolor="#1fc2f0" data-bgcolor="#fff">
     <div>
       <h5><span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">Horizontal</span> <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2">scroll</span> <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">+ colors</span></h5>
       <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive Scroll.</p>
+
+      <!-- <div id='holdboth1'>
+        <div id='hiddenarea' class="initclip positionadjust textstyles texttop">
+          That is what I hate to do 
+        </div>
+        <div class="positionadjust textstyles textbottom">  
+          This is what I want to do
+        </div>
+     </div> -->
+
     </div>
-  </section> -->
+  </section>
 
     <h2 class="intro-Text" data-textcolor="#1fc2f0" data-bgcolor="#091318" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12">TAKE  A QUICK LOOK</h2>
 
@@ -101,6 +114,7 @@
   </section>
 
   <h2 class="intro-Text logos" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10">
+    
     <div class="svg-container">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 30 30">
         <path d="M10 29L10 29c-2.209 0-4-1.791-4-4l0 0c0-2.209 1.791-4 4-4h2.857C13.488 21 14 21.512 14 22.143V25C14 27.209 12.209 29 10 29zM20 9h-2.857C16.512 9 16 8.488 16 7.857V2.143C16 1.512 16.512 1 17.143 1H20c2.209 0 4 1.791 4 4l0 0C24 7.209 22.209 9 20 9zM10 1h2.857C13.488 1 14 1.512 14 2.143v5.714C14 8.488 13.488 9 12.857 9H10C7.791 9 6 7.209 6 5l0 0C6 2.791 7.791 1 10 1zM10 11h2.857C13.488 11 14 11.512 14 12.143v5.714C14 18.488 13.488 19 12.857 19H10c-2.209 0-4-1.791-4-4l0 0C6 12.791 7.791 11 10 11zM20 11A4 4 0 1020 19 4 4 0 1020 11z"></path>
@@ -117,7 +131,7 @@
       </svg><span class="hover-text">HTML</span>
       </div>
 
-      <div class="svg-container">
+      <div class="svg-container" style="transform: scale(1.2);">
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
         <path fill-rule="evenodd" d="M 42 6 L 39 40 L 25 44 L 11 40 L 8 6 Z M 16.800781 28 L 20.800781 28 L 20.898438 30.5 L 25 31.898438 L 29.101563 30.5 L 29.398438 26 L 20.601563 26 L 20.398438 22 L 29.601563 22 L 29.898438 18 L 16.101563 18 L 15.800781 14 L 34.101563 14 L 33.601563 22 L 32.898438 33.5 L 25 36.101563 L 17.101563 33.5 Z"></path>
         </svg><span class="hover-text">CSS</span>
@@ -178,10 +192,15 @@
 
   <section class="xray">
     <div id='holdboth'>
-      <div id='hiddenarea' class="initclip positionadjust textstyles texttop" >That is what I hate to do </div>
-      <div  class="positionadjust textstyles textbottom" >This is what I want to do</div>
+        <div id='hiddenarea' class="initclip positionadjust textstyles texttop">
+          That is what I hate to do 
+        </div>
+        <div class="positionadjust textstyles textbottom">
+          This is what I want to do
+        </div>
      </div>
   </section>
+
 
   <section class="horizontal-scroll" data-textcolor="#bcb8ad" data-bgcolor="#815946">
     <div class="pin-wrap">
@@ -244,7 +263,7 @@
     <h2 data-scroll data-scroll-speed="1">This should be a pink background</h2>
   </section>
 
-  <footer id="footer" data-bgcolor="#111c27" data-textcolor="#fff">
+  <footer id="footer" data-bgcolor="#111c27" data-textcolor="#fff" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5">
     <div class="footer-parent">
        <div  id="footer-logo" class="div1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-1"> aj ramirez </div>
 
@@ -277,9 +296,6 @@
 <script  src="./cursor.js"></script>
 <script  src="./script.js"></script>
 <script  src="./navigation.js"></script>
-<script>
-
-</script>
 
 </body>
 </html>

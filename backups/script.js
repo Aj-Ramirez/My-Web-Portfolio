@@ -34,7 +34,6 @@ window.addEventListener("load", function () {
 
 
   // Pinning and horizontal scrolling
-
   let horizontalSections = document.querySelectorAll(".horizontal-scroll");
 
   horizontalSections.forEach(horizontalSection => {
@@ -56,7 +55,7 @@ window.addEventListener("load", function () {
 
   });
 
-       // Pinning and horizontal scrolling
+       // Pinning and Rhorizontal scrolling
    
        let horizontalSections1 = document.querySelectorAll(".R-horizontal-scroll");
    
@@ -90,6 +89,9 @@ window.addEventListener("load", function () {
     const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
     hbits.style.clipPath = clipPathValue;
   } 
+
+  
+
   
   
   /* COLOR CHANGER */
@@ -157,7 +159,7 @@ function applyStylesWithColor() {
 //  HERO BTN AND HEADING CHANGE TEXT
 function changeTextFront(text) {
   const front = document.querySelector('#front'); 
-  front.textContent = text;
+    front.textContent = text;
 }
 function changeTextEnd(text) {
   const end = document.querySelector('#end');

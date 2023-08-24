@@ -3,6 +3,7 @@
   --bg-color: #ffffff;
 }
 
+
 body {
   font-family: termina, sans-serif;
   color: var(--text-color);
@@ -12,6 +13,7 @@ body {
   max-width: 100%;
   width: 100%;
   overscroll-behavior: none;
+  cursor: none;
 }
 
 section:not(.horizontal-scroll):not(.text_readings):not(.R-horizontal-scroll):not(.xray):not(.hero){
@@ -482,14 +484,13 @@ h1{
   .button:active {
     scale: 1;
   }
-  .heading2{
-    background: -webkit-linear-gradient(rgb(20, 135, 185), rgb(31, 194, 240)); 
+  /* #dev{
+    background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240)); 
     background-clip: text; 
     -webkit-background-clip: text;
       color: transparent;
     -webkit-text-fill-color: transparent;
-    
-  }
+  } */
 
   .tracking-in-expand {
     animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -521,7 +522,7 @@ h1{
     }
     #name{
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 600;
       font-family: "Poppins" !important;
       line-height: 80%;
       transition: color 0.3s ease;
@@ -808,18 +809,17 @@ color: #3782ce;
   width: inherit;
   justify-content: center;
 }
-.textbottom{
-  color:lightblue;
-  z-index:1;
-}
 .texttop{
   color:#21374d;
   z-index:10;
   width: inherit;
 }
-
+.textbottom{
+  color:lightblue;
+  z-index:1;
+}
 .initclip {
-  clip-path: circle(100px at -100px -100px);
+  clip-path: circle(50px at -100px -100px);
   background-color: #1fc2f0;
   height: inherit;
   width: inherit;
@@ -843,34 +843,36 @@ color: #3782ce;
   width: 1.5rem;
   height: 3rem;
   border-radius: 10px;
-  transition: width 0.3s ease;
-  transition: height 0.3s ease;
+  transition: width 0.5s ease;
+  transition: height 0.5s ease;
 }
+
 .shrinkCursor{
-  transform: scale(0.5) translate(-100%, -100%);
+  transform: scale(0.5) translate(-100%, -100%); 
 }
 
 .logos{
   /* stroke: #1fc2f0; */
   fill: #21374d;
   display: flex;
-  gap: 100px;
+  gap: 50px;
   padding: 50px 50px;
 }
 .logos svg:hover{
   fill: #1fc2f0;
-  cursor: pointer;
   transition: 0.3s ease;
   transform: scale(1.1);
   filter: drop-shadow(0px 0px 10px #1fc3f07d);
+}
+.logos svg:not(:hover){
+  transition: 2s ease;
+  transform: scale(1.0);
 }
 
 .svg-container {
   position: relative;
   display: inline-block;
-  cursor: pointer;
 }
-
 .hover-text {
   position: absolute;
   bottom: -25px; /* Adjust this value as needed */
