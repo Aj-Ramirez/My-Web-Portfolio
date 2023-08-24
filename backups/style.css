@@ -13,7 +13,7 @@ body {
   max-width: 100%;
   width: 100%;
   overscroll-behavior: none;
-  cursor: none;
+  /* cursor: none; */
 }
 
 section:not(.horizontal-scroll):not(.text_readings):not(.R-horizontal-scroll):not(.xray):not(.hero){
@@ -32,6 +32,9 @@ img {
   height: 95vh;
   width: auto;
   object-fit: cover;
+  object-position: top;
+  aspect-ratio: 4/3;
+  border-radius: 10px;
 }
 
 h5 {
@@ -284,12 +287,106 @@ h2 {
 
 
 
+/* BRAND NAME */
+
+.slide-in-blurred-right {
+	-webkit-animation: slide-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+	        animation: slide-in-blurred-right 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+}
+
+ @-webkit-keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-right {
+  0% {
+    -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-blurred-left {
+	-webkit-animation: slide-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+	        animation: slide-in-blurred-left 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+}
+
+ @-webkit-keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+            transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
 
 
 /* HERO SECTION */
 .tracking-in-contract-bck-top {
-	-webkit-animation: tracking-in-contract-bck-top 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
-	        animation: tracking-in-contract-bck-top 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+	-webkit-animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
+	        animation: tracking-in-contract-bck-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
 }
 
  @-webkit-keyframes tracking-in-contract-bck-top {
@@ -326,8 +423,8 @@ h2 {
 }
 
 .tracking-in-contract-bck-bottom {
-	-webkit-animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
-	        animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+	-webkit-animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.7s both;
+	        animation: tracking-in-contract-bck-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.7s both;
 }
 
  @-webkit-keyframes tracking-in-contract-bck-bottom {
@@ -363,8 +460,8 @@ h2 {
   }
 }
 .text-focus-in {
-	-webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
-	        animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
 }
 
  @-webkit-keyframes text-focus-in {
@@ -428,16 +525,15 @@ h1{
      animation: introAnimation 1.5s ease-out 1s forwards; 
  }
 
- p #hero-body-text {
+ #hero-body-text {
   font-family: 'Montserrat';
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.2rem;
   line-height: 150%;
   text-align: center;
   max-width:700px;
   /* color: var(--text-color); */
   opacity:0;
-  color: #111c27 !important;
 }
    /* HERO BUTTON  */
 
@@ -484,17 +580,20 @@ h1{
   .button:active {
     scale: 1;
   }
-  /* #dev{
-    background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240)); 
+  #dev, .dot{
+    /* background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240));  */
+    background: linear-gradient(to right, rgb(20, 135, 185), rgb(25, 160, 218)); 
     background-clip: text; 
     -webkit-background-clip: text;
       color: transparent;
     -webkit-text-fill-color: transparent;
-  } */
+  }
+  #dev:hover{
+    background: transparent !important;
+  }
 
   .tracking-in-expand {
-    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-    animation-delay: 4s;
+    animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
   }
   @-webkit-keyframes tracking-in-expand {
     0% {
@@ -791,7 +890,7 @@ color: #3782ce;
 /* XRAY */
 #holdboth{
   position:relative;
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -832,7 +931,6 @@ color: #3782ce;
   height: 1.8rem;
   z-index: 100;
   background-color: #1fc2f0;
-  border: 1px solid #1fc2f0;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -842,11 +940,9 @@ color: #3782ce;
 .scrollMouse {
   width: 1.5rem;
   height: 3rem;
-  border-radius: 10px;
-  transition: width 0.5s ease;
-  transition: height 0.5s ease;
+  border-radius: 15px;
+  transition: width 0.7s, height 0.7s, border-radius 0.7s ease;
 }
-
 .shrinkCursor{
   transform: scale(0.5) translate(-100%, -100%); 
 }
@@ -885,4 +981,10 @@ color: #3782ce;
 
 .svg-container:hover .hover-text {
   opacity: 1;
+}
+
+.svg-container {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
 }

@@ -8,7 +8,7 @@ let mouseCursor = document.querySelector(".cursor");
 // let aboutHover = document.querySelector("#aboutHeading");
 // let introHover = document.querySelector("#about-text")
 // let introBtn = document.querySelector(".button1")
-let xrayText = document.querySelector(".hiddenarea")
+// let xrayText = document.querySelector("#holdboth")
 
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mousedown', handleMouseDown);
@@ -34,10 +34,49 @@ function handleMouseScrollStart() {
   mouseCursor.classList.add("scrollMouse");
 }
 
-function handleMouseScrollEnd() {
-     isMouseScroll = false;
-      mouseCursor.classList.remove("scrollMouse")
+// function handleMouseScrollEnd() {
+//      isMouseScroll = false;
+//       mouseCursor.classList.remove("scrollMouse")
+// }
+
+// function handleMouseScrollEnd() {
+//   isMouseScroll = false;
+//   mouseCursor.style.transition = "width 0.5s, height 0.5s, border-radius 0.3s ease"; // Add transition to width and height
+//   mouseCursor.classList.remove("scrollMouse");
   
+//   // After the transition, reset the transition property to avoid unintended animations
+//   mouseCursor.addEventListener("transitionend", () => {
+//     mouseCursor.style.transition = "";
+//   }, { once: true });
+// }
+
+let scrollingTimeout;
+let isScrolling = false;
+
+// Add both "wheel" and "touchmove" event listeners
+window.addEventListener('wheel', handleScroll);
+window.addEventListener('touchmove', handleScroll);
+
+function handleScroll() {
+  clearTimeout(scrollingTimeout);
+  isScrolling = true;
+
+  scrollingTimeout = setTimeout(() => {
+    if (isScrolling) {
+      handleMouseScrollEnd();
+      isScrolling = false;
+    }
+  }, 100); // Adjust the timeout value as needed
+}
+
+function handleMouseScrollEnd() {
+  // Your existing code for handling the end of scrolling
+  mouseCursor.style.transition = "width 0.7s, height 0.7s, border-radius 0.7s ease"; // Add transition to width, height, and border-radius
+  mouseCursor.classList.remove("scrollMouse");
+
+  mouseCursor.addEventListener("transitionend", () => {
+    mouseCursor.style.transition = "";
+  }, { once: true });
 }
 
 

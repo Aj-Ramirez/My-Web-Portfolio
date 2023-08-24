@@ -32,6 +32,10 @@ const burgerNav = document.querySelector('.burger-nav');
     isWrapperVisible = !isWrapperVisible;
   });
 
+  burgerNav.classList.add("slide-in-blurred-right");
+  setTimeout(() => {
+    burgerNav.classList.remove("slide-in-blurred-right");
+  }, 2000);
 
 
   // function scrollToSection(sectionId) {
