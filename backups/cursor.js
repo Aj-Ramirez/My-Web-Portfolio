@@ -16,6 +16,11 @@ window.addEventListener('mouseup', handleMouseUp);
 window.addEventListener('wheel', handleMouseScrollStart);
 window.addEventListener('mousemove', handleMouseScrollEnd); 
 
+// Add both "wheel" and "touchmove" event listeners
+window.addEventListener('wheel', handleScroll);
+window.addEventListener('touchmove', handleScroll);
+
+
 
 function cursor (e) {
      mouseCursor.style.top = e.pageY + 'px';
@@ -53,10 +58,6 @@ function handleMouseScrollStart() {
 let scrollingTimeout;
 let isScrolling = false;
 
-// Add both "wheel" and "touchmove" event listeners
-window.addEventListener('wheel', handleScroll);
-window.addEventListener('touchmove', handleScroll);
-
 function handleScroll() {
   clearTimeout(scrollingTimeout);
   isScrolling = true;
@@ -70,8 +71,7 @@ function handleScroll() {
 }
 
 function handleMouseScrollEnd() {
-  // Your existing code for handling the end of scrolling
-  mouseCursor.style.transition = "width 0.7s, height 0.7s, border-radius 0.7s ease"; // Add transition to width, height, and border-radius
+  mouseCursor.style.transition = "width 0.7s, height 0.7s, border-radius 0.7s, transform 0.3s ease";
   mouseCursor.classList.remove("scrollMouse");
 
   mouseCursor.addEventListener("transitionend", () => {

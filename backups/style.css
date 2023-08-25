@@ -2,6 +2,9 @@
   --text-color: #111;
   --bg-color: #ffffff;
 }
+::selection {
+  background-color: #ffffff;
+}
 
 
 body {
@@ -29,7 +32,7 @@ section:not(.horizontal-scroll):not(.text_readings):not(.R-horizontal-scroll):no
 }
 
 img {
-  height: 95vh;
+  height: 90%;
   width: auto;
   object-fit: cover;
   object-position: top;
@@ -580,17 +583,7 @@ h1{
   .button:active {
     scale: 1;
   }
-  #dev, .dot{
-    /* background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240));  */
-    background: linear-gradient(to right, rgb(20, 135, 185), rgb(25, 160, 218)); 
-    background-clip: text; 
-    -webkit-background-clip: text;
-      color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
-  #dev:hover{
-    background: transparent !important;
-  }
+
 
   .tracking-in-expand {
     animation: tracking-in-expand 0.9s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2.5s both;
@@ -621,7 +614,7 @@ h1{
     }
     #name{
       font-size: 3rem;
-      font-weight: 600;
+      font-weight: 700;
       font-family: "Poppins" !important;
       line-height: 80%;
       transition: color 0.3s ease;
@@ -629,6 +622,12 @@ h1{
       top: 50px;
       left: 50px; 
       z-index: 10;
+
+      display: flex;
+    }
+    #name img{
+      margin-right: 10px;
+      border-radius: 0px !important;
     }
 
   #front, #end ,#dev{
@@ -637,12 +636,34 @@ h1{
   position: relative;
 }
   #front:hover, #end:hover{
-    color: white;
-    -webkit-text-stroke: 1.5px #111c27;
+    color: transparent;
+    -webkit-text-stroke: 2px #111c27;
+    transition: all 0.5s ease;
   }
   #dev:hover{
-    color: white;
-    -webkit-text-stroke: 1.5px #111c27;
+    color: transparent;
+    -webkit-text-stroke: 2px #111c27;
+    transition: all 0.5s ease;
+  }
+  #dev, .dot{
+    /* background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240));  */
+    background: linear-gradient(to top, rgb(20, 135, 185), rgb(25, 160, 218)); 
+    background-clip: text; 
+    -webkit-background-clip: text;
+      color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  #front, #end{
+    /* background: linear-gradient(to right, rgb(20, 135, 185), rgb(31, 194, 240));  */
+    background: linear-gradient(to bottom, rgb(9, 17, 21), rgb(5, 52, 85)); 
+    background-clip: text; 
+    -webkit-background-clip: text;
+      color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #front:hover, #end:hover, #dev:hover{
+    background: transparent !important;
   }
 
   
@@ -663,7 +684,7 @@ h1{
   opacity: 0;
   /* background: #979797; */
   animation: show-mouse 3s cubic-bezier(0.77, 0, 0.175, 1) 3s forwards;
-  animation-delay: 7s;
+  animation-delay: 5s;
 }
  .container .mouse:after {
   display: block;
@@ -676,7 +697,7 @@ h1{
   margin-left: -3px;
   background-color:#111c27;
   border-radius:2px;
-  animation: mouse-wheel 3s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite;
+  animation: mouse-wheel 4s cubic-bezier(0.77, 0, 0.175, 1) 1s infinite;
 }
 @keyframes show-mouse{
     from{
@@ -765,7 +786,7 @@ h1{
   font-family: 'Poppins';
 /* transition: 3s ease;  */
 /* line-height: 100%; */
-font-weight: 500;
+font-weight: 700;
 }
 .footer-parent {
    display: grid;
@@ -988,3 +1009,19 @@ color: #3782ce;
   margin: 10px;
   text-align: center;
 }
+
+/* #puzzle{
+  width: 100px;
+  height: 100px;
+  fill: #21374d;
+  transition: 0.3s ease;
+
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  z-index: 99;
+}
+#puzzle img{
+ transform: scale(0.5);
+} */
