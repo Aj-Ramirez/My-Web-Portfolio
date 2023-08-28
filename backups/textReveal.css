@@ -1,0 +1,72 @@
+
+.shine {
+     color: #1fc2f0;
+     display:block;
+     margin:50px;
+     text-align: center;
+     position:relative;
+     font-weight: 800;
+     font-size: 50px;
+     text-align: center;
+     line-height: 110%;
+   
+     /* border: 1px solid red; */
+   }
+
+   .shine span{
+     position: absolute;
+     top: 0;
+     left: 0;
+     /* display: none; */
+     z-index: 100;
+     background-color: #091318;
+   }
+   
+   .shine:before {
+     position:absolute;
+     content:attr(data-text);
+     background-image: linear-gradient(to top, rgb(20, 135, 185), rgb(25, 160, 218));
+     
+     /* Set the background size and repeat properties. */
+     background-size: 100%;
+     background-repeat: repeat;
+   
+     /* Use the text as a mask for the background. */
+     /* This will show the gradient as a text color rather than element bg. */
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; 
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+     clip-path: circle(20px at var(--x,-100%) var(--y,-100%));
+   
+     /* border: 1px solid green; */
+   }
+   
+   .shine:hover::before {
+     position:absolute;
+     content:attr(data-text);
+     background-image: linear-gradient(to top, rgb(20, 135, 185), rgb(25, 160, 218));
+     
+     /* Set the background size and repeat properties. */
+     background-size: 100%;
+     background-repeat: repeat;
+   
+     /* Use the text as a mask for the background. */
+     /* This will show the gradient as a text color rather than element bg. */
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent; 
+     -moz-background-clip: text;
+     -moz-text-fill-color: transparent;
+     clip-path: circle(75px at var(--x,-100%) var(--y,-100%));
+   
+     transition: clip-path 0.1s ease;
+   
+     /* border: 3px solid gray; */
+   }
+   
+   .cursorHover {
+     width:210px;
+     height:210px;
+     transition: width 0.1s, height  0.1s ease;
+   }
+   

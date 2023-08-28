@@ -80,16 +80,46 @@ window.addEventListener("load", function () {
 
   // Text animation reveal hover xray
   const hbits = document.getElementById("hiddenarea");
+  // const hbits = document.querySelector(".shine");
   pageContainer.addEventListener("mousemove", handleMouseMove);
+  let c= document.querySelector('.cursor');
 
+  
   function handleMouseMove(event) {
+
+   
+
     const rect = hbits.getBoundingClientRect();
     const offsetX = event.clientX - rect.left;
     const offsetY = event.clientY - rect.top;
-    const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
-    hbits.style.clipPath = clipPathValue;
+    
+    hbits.addEventListener("mouseenter", () => {
+      c.classList.add("cursorHover"); // Add the class on hover
+    });
+  
+    hbits.addEventListener("mouseleave", () => {
+      c.classList.remove("cursorHover"); // Remove the class when leaving
+    });
+    setTimeout(()=>{
+      const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
+      hbits.style.clipPath = clipPathValue;
+    },100)
+    
+
+    
   } 
 
+  // pageContainer.addEventListener("mousemove", handleHoverText);
+  //   const shine = document.querySelector(".shine")
+  //   let c= document.querySelector('.cursor');
+    
+  // function handleHoverText(event) {
+  //   var rect= shine.getBoundingClientRect();
+  //   const offsetX = event.clientX - rect.left;
+  //   const offsetY = event.clientY - rect.top;
+  //   const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
+  //   shine.style.clipPath = clipPathValue;
+  // }
   
 
   

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="./images/fav.svg">
+  <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
   <title>backup2</title>
   <!-- FONT__AWESOME -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -11,6 +11,7 @@
 <link rel='stylesheet' href='https://use.typekit.net/skn8ash.css'>
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./textReveal.css">
 
 </head>
 <body>
@@ -46,13 +47,12 @@
        </svg>
     </div>
  </div>  
- <p id="name" class="slide-in-blurred-left" data-scroll-direction="vertical" data-scroll-speed="2"><span><img src="./images/fav.svg"/></span>&nbsp;&nbsp;&nbsp;&nbsp;klixt<span class="dot">.</span>dev</p>
+ <p id="name" class="slide-in-blurred-left" data-scroll-direction="vertical" data-scroll-speed="2"><span><img src="./images/favicon.svg"/></span>&nbsp;&nbsp;&nbsp;&nbsp;klixt<span class="dot">.</span>dev</p>
  <!-- <div id="puzzle">
   <img src="./images/fav.svg"/>
  </div> -->
 <!-- partial:index.partial.html -->
 <div class="container">
-
   <section class="hero" data-bgcolor="#eeeeee" data-textcolor="#8b949a">
     <div class="heroHeadings" style="text-align: center;">
        <h1 id="heading1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5">
@@ -80,8 +80,19 @@
     </a>
 
     <div data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5" class="mouse"></div>
+
+    <div class="my-icon" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3">
+      <div class="slide-in-blurred-left-icon">
+        <img src="./images/favicon.svg"/>
+      </div>
+    </div>
+    <div class="my-logo" data-scroll data-scroll-direction="vertical" data-scroll-speed="3">
+        <div class="slide-in-blurred-right-logo">
+        <img src="./images/Logo.svg"/>
+      </div>
+    </div>
    </section>
-<!-- 
+<!--  
   <section id="hero" data-textcolor="#1fc2f0" data-bgcolor="#fff">
     <div>
       <h5><span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1">Horizontal</span> <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-2">scroll</span> <span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-3">+ colors</span></h5>
@@ -105,7 +116,7 @@
 
   <section class="slide_Collections_Wrapper" data-bgcolor="#091318">
     <div class="collection_Preview" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-10">
-      <img src="https://images.pexels.com/photos/18116797/pexels-photo-18116797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+      <img src="./images/Breadily.jpg" alt="">
       <img src="./images/TheRealty.png" alt="The Realty">
       <img src="./images/FitNest.jpg" alt="">
     </div>
@@ -114,7 +125,7 @@
   <section class="slide_Collections_Wrapper" data-bgcolor="#091318">
     <div class="collection_Preview" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10">
       <img src="./images/Votanica.png" alt="">
-      <img src="https://images.pexels.com/photos/18116772/pexels-photo-18116772/free-photo-of-design-archives.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+      <img src="./images/Design Archives.jpg" alt="">
       <img src="./images/Plateria.png" alt="">
     </div>
   </section>
@@ -122,20 +133,37 @@
   <div id="icon-container" class="intro-Text logos" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-15">
   </div>
 
+  <div class="iconnection" data-textcolor="#1fc2f0" data-bgcolor="#091318">
+    <div class="iconnection-left" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-12">
+        <img src="./images/favicon.svg"/>
+    </div>
 
-  <section class="xray">
-    <div id='holdboth'>
+    <div class="iconnection-text">
+      <h2 data-scroll data-scroll-direction="vertical" data-scroll-speed="-1" style="margin-bottom: 30px;" class="shine">I'm your last piece to your masterpiece <span>I think you'll become part of my masterpiece.</span></h2>
+      <!-- <div id="revealText" data-text="Or you will be part of my masterpiece" class="shine"><span>I'm your last piece to your masterpiece</div> -->
+      <a href="https://www.linkedin.com/in/art-joseph-ramirez-236b05216/" target="_blank">
+        <button data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5" class="button iconnect-btn tracking-in-expand" onmouseover="changeText('Let`s make it happen')" onmouseout="changeText('Let`s be connected')" onclick="scrollToIntro()">Let`s Connect</button>
+      </a>
+    </div>
+
+    <div class="iconnection-right" data-scroll data-scroll-direction="horizontal" data-scroll-speed="12">
+        <img src="./images/Logo.svg"/>
+    </div>
+  </div>
+
+  <section class="xray" data-textcolor="#1fc2f0" data-bgcolor="#091318">
+    <div id='holdboth' data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
         <div id='hiddenarea' class="initclip positionadjust textstyles texttop">
-          That is what I hate to do 
+          Or you will be part of my masterpiece 
         </div>
         <div class="positionadjust textstyles textbottom">
-          This is what I want to do
+          I'm your last piece to your masterpiece
         </div>
      </div>
   </section>
 
 
-  <section class="horizontal-scroll" data-textcolor="#bcb8ad" data-bgcolor="#815946">
+  <section class="horizontal-scroll" data-textcolor="#21374d" data-bgcolor="#eeeeee">
     <div class="pin-wrap">
       <div>
         <h1><span data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1" style="white-space: nowrap;">Experiences scroll+ colors</span></h1>
@@ -196,14 +224,14 @@
     <h2 data-scroll data-scroll-speed="1">This should be a pink background</h2>
   </section>
 
-  <footer id="footer" data-bgcolor="#111c27" data-textcolor="#fff" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5">
+  <footer id="footer" data-bgcolor="#111c27" data-textcolor="#fff" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">
     <div class="footer-parent">
-       <div  id="footer-logo" class="div1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-1"> klixt<span class="dot">.</span>dev </div>
+       <div  id="footer-logo" class="div1" data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5"> klixt<span class="dot">.</span>dev </div>
      
 
-       <div class="div2" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"> FRONTEND SOFTWARE ENGINEER </div>
+       <div class="div2" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5"> FRONTEND SOFTWARE ENGINEER </div>
 
-       <div class="div3 soc-icon-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"> 
+       <div class="div3 soc-icon-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5"> 
              <i class="fab fa-linkedin"></i> 
              <i class="fab fa-facebook-square"></i> 
              <i class="fab fa-behance-square"></i> 
@@ -211,13 +239,13 @@
              <i class="fas fa-share-alt-square"></i>  
        </div>
 
-       <div class="div4 my-email-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
+       <div class="div4 my-email-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5"> GENERAL INQUIRIES <br> <a href="mailto:art.joseph.nallatan.ramirez@gmail.com">art.joseph.nallatan.ramirez@gmail.com</a> </div>
 
-       <div class="div5 my-phone-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="1">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
+       <div class="div5 my-phone-footer" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5">  PHONE <br> <a href="tel:+639957107180">+63995-710-7180</a> </div>
 
-       <div class="div6" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"> © 2023 </div>
+       <div class="div6" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5"> © 2023 </div>
 
-       <div class="div7" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"> <a id="top"><i class="fas fa-arrow-up"></i></a> </div>
+       <div class="div7" data-scroll data-scroll-direction="vertical" data-scroll-speed="0.5"> <a id="top"><i class="fas fa-arrow-up"></i></a> </div>
     </div> <!-- END FOOTER -->
  </footer>
 </div>
@@ -231,6 +259,6 @@
 <script  src="./script.js"></script>
 <script  src="./navigation.js"></script>
 <script  src="./techstack_icon.js"></script>
-
+<script  src="./textReveal.js"></script>
 </body>
 </html>
