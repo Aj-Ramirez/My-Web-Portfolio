@@ -1154,7 +1154,7 @@ color: #3782ce;
   left: 5%;
   transform: translate(0, -50%) scale(0.2);
   z-index: 91;
-} .iconnection-left img{
+} .iconnection-left #icon-left{
   height: 150px;
   width: auto;
   object-fit: fill;
@@ -1167,7 +1167,7 @@ color: #3782ce;
   right: -3%;
   transform: translate(0, -50%) scale(0.5);
   z-index: 90;
-} .iconnection-right img{
+} .iconnection-right #icon-right{
   height: 300px;
   width: auto;
   object-fit: fill;
