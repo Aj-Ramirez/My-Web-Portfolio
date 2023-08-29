@@ -22,7 +22,7 @@ body {
   max-width: 100%;
   width: 100%;
   overscroll-behavior: none;
-  cursor: none;
+  /* cursor: none; */
 }
 
 section:not(.horizontal-scroll):not(.text_readings):not(.R-horizontal-scroll):not(.xray):not(.hero){
@@ -737,7 +737,7 @@ h1{
 }
 
 #dev{
-  -webkit-text-stroke: 2  px rgb(20, 135, 185); 
+  -webkit-text-stroke: 2px rgb(20, 135, 185); 
 }
   #front:hover, #end:hover{
     color: transparent;
@@ -1012,43 +1012,7 @@ color: #3782ce;
 
 
 
-/* XRAY */
-#holdboth{
-  position:relative;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.positionadjust{
-  position:absolute;
-}
-.textstyles{
-  font-size:48px;
-  padding:20px;
-  font-weight:bold;
-  display: flex;
-  align-items: center;
-  width: inherit;
-  justify-content: center;
-}
-.texttop{
-  /* color:#21374d; */
-  /* color:#1fc2f0; */
-  z-index:10;
-  width: inherit;
-}
-.textbottom{
-  color:lightblue;
-  z-index:1;
-}
-.initclip {
-  clip-path: circle(50px at -100px -100px);
-  background-color: #091318;
-  /* height: inherit;
-  width: inherit; */
-}
+
 
 .shine {
   color: #1fc2f0;
@@ -1086,7 +1050,8 @@ color: #3782ce;
 .scrollMouse {
   width: 1.5rem;
   height: 3rem;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  border-radius: 50% !important;
   transition: width 0.7s, height 0.7s, border-radius 0.7s ease;
 }
 .shrinkCursor{
@@ -1224,11 +1189,25 @@ color: #3782ce;
 #introducing{
   z-index: 95;
   font-size: 15rem;
-  font-weight: 700;
-  font-family: "Poppins" !important;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif !important;
   line-height: 80%;
   transition: color 3s ease;
   animation: introAnimation 1.5s ease-out 1s forwards; 
+ }
+ #about-title{
+  font-size: 15rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase;
+ }
+
+ #mstr{
+  background: linear-gradient(to top, rgb(20, 135, 185), rgb(25, 160, 218)); 
+    background-clip: text; 
+    -webkit-background-clip: text;
+      color: transparent;
+    -webkit-text-fill-color: transparent;
  }
 
  .photo-container {
@@ -1248,18 +1227,19 @@ color: #3782ce;
   width: 290px;
   background: transparent;
   border-radius: 10px;
-  transition: border 1s;
+  transition: border 1s, backdrop-filter 1s ease;
   position: relative;
 }
 .border:hover {
   border: 1px solid #fff;
 }
+
 .card {
   height: 379px;
   width: 300px;
   background: #808080;
-  border-radius: 10px;
-  transition: background 0.8s;
+  border-radius: 15px;
+  transition: background 0.8s, filter 0.5s, scale 0.3s ease;
   overflow: hidden;
   background: #000;
   box-shadow: 0 70px 63px -60px #00000080;
@@ -1272,30 +1252,70 @@ color: #3782ce;
 .card0 {
   background: url("./images/aj.jpg") center center no-repeat;
   background-size: 400px;
+  filter: grayscale(100);
 }
 .card0:hover {
   background: url("./images/aj.jpg") left center no-repeat;
   background-size: 600px;
-
+  filter: grayscale(0);
 }
-.card0:hover #photo-name {
+/* .card0::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to top, rgba(20, 135, 185,0.3), rgba(25, 160, 218,0.3)); 
+} */
+.card0:hover #photo-name, .card0:hover #photo-title {
+  opacity: 1;
+}
+.card1:hover #photo-name, .card1:hover #photo-title {
   opacity: 1;
 }
 .card0:hover .fa {
   opacity: 1;
 }
 
+.card1 {
+  position: relative;
+  background: url("./images/aj1.jpg") center center no-repeat;
+  background-size: 300px;
+  filter: grayscale(100);
+}
+.card1:hover {
+  background: url("./images/aj1.jpg") left center no-repeat;
+  background-size: 600px;
+  filter: grayscale(0);
+}
+.card1:hover #photo-name {
+  opacity: 1;
+}
+.card1:hover .fa {
+  opacity: 1;
+}
+
 #photo-name {
-  color: #fff;
   margin: 20px;
   opacity: 0;
   transition: opacity 1s;
+  font-weight: 600;
+  z-index: 1000;
+}
+#photo-title{
+  font-size: 10px;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1000;
 }
 .fa {
   opacity: 0;
   transition: opacity 1s;
   display: flex;
   position: relative;
+  z-index: 1000;
 }
 .fa:hover {
   color: #fff;
@@ -1324,16 +1344,26 @@ color: #3782ce;
   top:0;
   left: 0;
   color: white;
-  padding: 2px 0px 5px 20px;
-  z-index: 1;
+  padding: 4px 0px 5px 20px;
+  z-index:-1;
   opacity: 0;
   transition: opacity 0.5s ease;
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 
 }
 
 .fa:hover .tooltip {
   display: block;
   opacity: 1;
+}
+#about-me-text{
+  text-align: center;
+  max-width: 800px;
+  line-height: 150%;
+}
+
+.icon-span i{
+  font-size: 15px; /* Adjust the height value as needed */
+  margin: 3px 3px; /* Add some spacing between icons */
 }

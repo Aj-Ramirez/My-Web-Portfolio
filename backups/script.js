@@ -101,7 +101,7 @@ window.addEventListener("load", function () {
       c.classList.remove("cursorHover"); // Remove the class when leaving
     });
     setTimeout(()=>{
-      const clipPathValue = `circle(100px at ${offsetX}px ${offsetY}px)`;
+      const clipPathValue = `circle(150px at ${offsetX}px ${offsetY}px)`;
       hbits.style.clipPath = clipPathValue;
     },100)
     
@@ -213,3 +213,5 @@ function changeTextIntro(text) {
   button.textContent = text;
 }
 // END
+
+

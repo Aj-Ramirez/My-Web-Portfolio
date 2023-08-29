@@ -1,14 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
-// let burgerHover = document.querySelector(".burger-nav");
-// let btnHover = document.querySelector(".button")
-// let heroHeadingHover = document.querySelector(".heroHeadings")
-// let socIconHover = document.querySelector(".soc-icon-footer");
-// let myEmailHover = document.querySelector(".my-email-footer");
-// let myPhoneHover = document.querySelector(".my-phone-footer");
-// let aboutHover = document.querySelector("#aboutHeading");
-// let introHover = document.querySelector("#about-text")
-// let introBtn = document.querySelector(".button1")
-// let xrayText = document.querySelector("#holdboth")
+
 
 window.addEventListener('mousemove', cursor);
 window.addEventListener('mousedown', handleMouseDown);
@@ -80,35 +71,31 @@ function handleMouseScrollEnd() {
 }
 
 
-// window.addEventListener("scroll", () => {
-//   mouseCursor.classList.toggle("scrollMouse", window.scrollY > 0);
-// });
+// let isMouseMove = false;
+// let mouseMoveTimeout;
 
-// let elementHover = [mouseCursor, 
-//                     burgerHover, 
-//                     btnHover, 
-//                     heroHeadingHover, 
-//                     socIconHover, 
-//                     myEmailHover, 
-//                     myPhoneHover,
-//                     aboutHover,
-//                     introHover,
-//                     introBtn,
-//                     xrayText,
-//                   ];
+// window.addEventListener('mousemove', handleMouseMove);
+// window.addEventListener('mousedown', handleMouseDown);
+// window.addEventListener('mouseup', handleMouseUp);
 
-// document.addEventListener('mouseover', (e) => {
-//      let targetElement = e.target;
-   
-//      // Check if the target element is in the elementHover array or a child of any element in the array
-//      let isHoveredElement = elementHover.some(element => element === targetElement || element.contains(targetElement));
-   
-//      if (isHoveredElement) {
-//        mouseCursor.classList.add("link-grow");
-//        mouseCursor.classList.remove("unlink-grow")
-//      } else {
-//        mouseCursor.classList.remove("link-grow");
-//        mouseCursor.classList.add("unlink-grow");
-//       }
-// });
+// function handleMouseMove(e) {
+//   // Clear any previous timeout to prevent unnecessary toggling
+//   clearTimeout(mouseMoveTimeout);
+
+//   // Set the cursor position
+//   mouseCursor.style.top = e.pageY + 'px';
+//   mouseCursor.style.left = e.pageX + 'px';
+
+//   // Add logic to handle cursor shrink when not moving
+//   isMouseMove = true;
+//   mouseCursor.classList.add("shrinkCursor");
+//   mouseCursor.style.transition = "width 0.7s, height 0.7s, border-radius 0.7s, transform 0.3s ease";
+
+//   // Set a timeout to remove the class after a certain period of inactivity
+//   mouseMoveTimeout = setTimeout(() => {
+//     isMouseMove = false;
+//     mouseCursor.classList.remove("shrinkCursor");
+//   }, 100); // Adjust the timeout value as needed
+// }
+
 
