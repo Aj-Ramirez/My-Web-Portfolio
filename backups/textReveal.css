@@ -92,3 +92,9 @@
   height:500px;
   transition: width 0.1s, height  0.1s ease;
 }
+
+.shine:hover ~ .cursor {
+  width:150px;
+  height:150px;
+  transition: width 0.3s, height  0.3s ease;
+} 

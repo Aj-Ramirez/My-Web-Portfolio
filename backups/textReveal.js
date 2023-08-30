@@ -66,7 +66,6 @@
 //   const shine3 = new Shine(".mstrRevealText1", ".cursor");
 // });
 
-
 class Shine {
   constructor(elementSelector, cursorSelector, hoverCursorClass) {
     this.element = document.querySelector(elementSelector);
@@ -96,12 +95,12 @@ class Shine {
         setTimeout(() => {
           const clipPathValue = `circle(250px at ${offsetX}px ${offsetY}px)`;
           this.revealText.style.clipPath = clipPathValue;
-        }, 50);
+        }, 100);
       } else {
         setTimeout(() => {
         const clipPathValue = `circle(150px at ${offsetX}px ${offsetY}px)`;
         this.revealText.style.clipPath = clipPathValue;
-      }, 50);
+      }, 100);
       }
 
       this.cursor.style.left = `${e.clientX}px`;
@@ -131,16 +130,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+// CLICK TRANSITIONING CARDS
   const cards = document.querySelectorAll(".card")
 
   cards.forEach((card) => {
     card.addEventListener("mousedown", ()=>{
       card.style.transform = "scale(1.95)";
-      card.style.transition = "transform 0.3s ease";
+      card.style.transition = "transform 0.1s ease";
     })
     card.addEventListener("mouseup", () => {
       card.style.transform = "scale(2)";
-      card.style.transition = "transform 0.3s ease";
+      card.style.transition = "transform 0.2s ease";
     });
   })
 

@@ -4,7 +4,7 @@ if($(window).width() > 767){
      gsap.timeline({
        scrollTrigger: {
          trigger: $('.sticky-portion'),
-         start: "top 75px",
+         start: "top 10px",
          pin: true,
          scrub: 1.4,
          end: containerHeight
