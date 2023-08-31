@@ -95,12 +95,12 @@ class Shine {
         setTimeout(() => {
           const clipPathValue = `circle(250px at ${offsetX}px ${offsetY}px)`;
           this.revealText.style.clipPath = clipPathValue;
-        }, 100);
+        }, 50);
       } else {
         setTimeout(() => {
         const clipPathValue = `circle(150px at ${offsetX}px ${offsetY}px)`;
         this.revealText.style.clipPath = clipPathValue;
-      }, 100);
+      }, 50);
       }
 
       this.cursor.style.left = `${e.clientX}px`;

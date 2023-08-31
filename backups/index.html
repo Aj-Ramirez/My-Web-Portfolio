@@ -35,12 +35,26 @@
   <div class="cursor"></div>
   <div class="nav_wrapper">
     <div class="in_nav_wrapper">
-
+      <p>in_nav_wrapper</p>
     </div>
-    <p>This is the wrapper content</p>
+    <p>nav_wrapper</p>
   </div>
   <div class="burger-nav">
-    <svg id="burgerNav">
+    <div class="burgnav">
+      <input type="checkbox" />
+      <svg>
+        <use xlink:href="#menu" />
+        <use xlink:href="#menu" />
+      </svg>
+    </div>
+    <!-- SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 56" id="menu">
+        <path d="M48.33,45.6H18a14.17,14.17,0,0,1,0-28.34H78.86a17.37,17.37,0,0,1,0,34.74H42.33l-21-21.26L47.75,4"/>
+      </symbol>
+    </svg>
+
+    <!-- <svg id="burgerNav">
       <defs>
         <filter id="gooeyness">
           <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="blur" />
@@ -62,11 +76,11 @@
       <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
         <path class="line" d="M 34,32 L 66,68" />
         <path class="line" d="M 66,32 L 34,68" />
-      </svg>
+      </svg> -->
     </div>
   </div>
   <p id="name" class="slide-in-blurred-left" data-scroll-direction="vertical" data-scroll-speed="2"><span><img
-        src="./images/favicon.svg" /></span>&nbsp;&nbsp;&nbsp;&nbsp;klixt<span class="dot">.</span>dev</p>
+        src="./images/favicon.svg" alt="My Icon & Logo" /></span>&nbsp;&nbsp;&nbsp;&nbsp;klixt<span class="dot">.</span>dev</p>
   <!-- <div id="puzzle">
   <img src="./images/fav.svg"/>
  </div> -->
@@ -167,8 +181,8 @@
 
       <div class="iconnection-text">
         <h2 data-scroll data-scroll-direction="vertical" data-scroll-speed="-1" style="margin-bottom: 30px;"
-          class="shine">Here's your last piece to your masterpiece<span>I think you'll become part of my
-            masterpiece.</span></h2>
+          class="shine">Here's your last piece to your masterpiece<span>I think you'll become part of my masterpiece.</span>
+        </h2>
         <a href="https://www.linkedin.com/in/itsajramirez/" target="_blank">
           <button data-scroll data-scroll-direction="vertical" data-scroll-speed="-0.5"
             class="button iconnect-btn tracking-in-expand" onmouseover="changeText('Let`s make it happen')"
@@ -184,12 +198,12 @@
     <section class="horizontal-scroll" data-textcolor="#eeeeee" data-bgcolor="#030303">
       <div class="pin-wrap">
         <div style="width: 100vw;">
-          <h2 id="introducing" data-scroll data-scroll-direction="horizontal" data-scroll-speed="15">Introducing...</h2>
+          <h2 id="introducing" data-scroll data-scroll-direction="horizontal" data-scroll-speed="20"><span >Introducing...</span></h2>
         </div>
         <div>
           <h1 id="about-title" data-scroll data-scroll-direction="horizontal" data-scroll-speed="5"
             style="white-space: nowrap; line-height: 100%;" class="mstrRevealText">The<br> Mastermind <br>Behind
-            these<br> Works <span> Meet The<br> One Man Team<br>who built <br>these Works</span> </h1>
+            these<br> Works <span> Meet The<br> One Man Team<br>who built <br>these Works.</span> </h1>
         </div>
         <div class="photo-container">
           <div class="card card0">
@@ -215,6 +229,7 @@
                   <i class="fab fa-git-alt"></i>
                   <i class="tf tf-github"></i>
                   <i class="tf tf-vite"></i>
+                  <i class="fab fa-unity"></i>
                   <i class="tf tf-npm-alt"></i>
                   <i class="fab fa-wordpress"></i>
                 </span>
@@ -312,26 +327,38 @@
             </div>
           </div>
         </div>
-        <div>
-          <h3 id="about-me-text">Aj Ramirez is Design and Tech enthusiast who developed incredible user-friendly
-            frontend design through mobile and web platforms</h3>
+        <div id="about-container">
+          <h3 id="about-me-text">
+            <p>Meet <span id="specialtext">Aj Ramirez</span>, a visionary at the crossroads of <span id="specialtext">design and technology</span>. With a passion for crafting remarkable and user-centric <span id="specialtext">frontend experiences</span> across <span id="specialtext">mobile</span> and <span id="specialtext">web</span> platforms.</p>
+            </h3>
+            <div class="box-container">
+              <div class="box box1">
+                 <p>Design & Tech <br> Enthusiast</p>
+              </div>
+              <div class="box box2">
+                 <p>Tech Innovator</p>
+              </div>
+              <div class="box box3">
+                 <p>Mobile & Web <br> Frontend Developer</p>
+              </div>
+              <div class="box box4">
+                <p>UI & UX Designer</p>
+              </div>
+           </div>
+           <!-- <h3 id="about-me-text">
+            <p>In a world where design and technology converge, Aj Ramirez stands as a beacon of innovation, crafting digital landscapes that are as functional as they are aesthetically delightful. Join Aj on a journey through the captivating fusion of design and technology that's bound to leave a</p>
+            </h3> -->
         </div>
-        <img
-          src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt="">
-        <img
-          src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-          alt="">
       </div>
     </section>
 
     <section class="xray" data-textcolor="#1fc2f0" data-bgcolor="#091318">
       <div id='holdboth' data-scroll data-scroll-direction="vertical" data-scroll-speed="5">
         <div id='hiddenarea' class="initclip positionadjust textstyles texttop">
-          Or you will be part of my masterpiece
+          In a world where design and technology converge, Aj Ramirez stands as a beacon of innovation, crafting digital landscapes that are as functional as they are aesthetically delightful.
         </div>
         <div class="positionadjust textstyles textbottom">
-          I'm your last piece to your masterpiece
+          In a world where design and technology converge, Aj Ramirez stands as a beacon of innovation, crafting digital landscapes that are as functional as they are aesthetically delightful.
         </div>
       </div>
     </section>
